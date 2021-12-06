@@ -1,0 +1,25 @@
+.product-details__container {
+  outline: 2px dashed $red;
+  margin: 0 20px 0 20px;
+}
+
+.product-details__title {
+  font-size: 36px;
+  line-height: 40px;
+  font-weight: 400;
+  margin: 0;
+  padding-top: 27px;
+}
+
+.product-details__list {
+  list-style: none;
+  padding-bottom: 42px;
+  margin: 0;
+}
+
+.product-details__item p {
+  font-family: $second-font;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 400;
+}

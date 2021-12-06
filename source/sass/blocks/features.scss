@@ -1,0 +1,40 @@
+.features__container {
+  outline: 2px dashed $red;
+  margin: 20px 20px 0 20px;
+}
+
+.features__title {
+  color: $dark;
+  font-size: 24px;
+  line-height: 37px;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.features__list {
+  list-style: none;
+  margin: 0;
+}
+
+.features__list a {
+  color: $dark;
+}
+
+.features__item {
+  background-color: $grey;
+}
+
+.features__item p {
+  font-family: "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 400;
+}
+
+.features__item a {
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 400;
+  text-transform: uppercase;
+}

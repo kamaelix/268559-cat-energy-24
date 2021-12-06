@@ -1,0 +1,29 @@
+/*
+.page-header__container {
+  outline: 2px dashed $red;
+  margin: 10px 20px 20px 20px;
+}
+*/
+
+.page-header__logo {
+  outline: 2px dotted $pink;
+}
+
+.main-nav {
+  outline: 2px dashed $green;
+  font-size: 20px;
+  line-height: 20px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.main-nav__list {
+  outline: 2px dashed $blue;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.main-nav__list a {
+  color: $dark;
+}
