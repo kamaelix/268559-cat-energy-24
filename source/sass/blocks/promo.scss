@@ -1,0 +1,33 @@
+.promo {
+  outline: 2px dashed $red;
+  background-color: rgba(104, 183, 56, 0.85);
+}
+
+.promo__container {
+  outline: 2px dotted $blue;
+
+  background-image: url("../../img/index-background-desktop-2.jpg"),
+    url("../../img/index-can-mobile-1.jpg");
+  background-repeat: no-repeat;
+}
+
+.promo__intro {
+  color: #ffffff;
+  font-size: 36px;
+  line-height: 36px;
+  font-weight: 400;
+  text-align: center;
+  //margin: 0 35px 0 35px;
+  padding-top: 25px;
+}
+
+.promo__slogan {
+  color: #ffffff;
+  font-size: 14px;
+  line-height: 14px;
+  font-weight: 400;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 0 60px 25px 60px;
+  padding-top: 25px;
+}

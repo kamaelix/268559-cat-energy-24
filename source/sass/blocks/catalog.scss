@@ -1,0 +1,21 @@
+.catalog {
+  outline: 2px dashed $green;
+}
+
+.products__container {
+  outline: 2px dashed $red;
+}
+
+.catalog-list {
+  outline: 3px dashed $blue;
+}
+
+.products-item {
+  outline: 3px dashed $pink;
+}
+
+.products__title {
+  font-size: 36px;
+  line-height: 36px;
+  text-transform: none;
+}
