@@ -1,6 +1,6 @@
 .features__container {
   outline: 2px dashed $red;
-  margin: 20px 20px 0 20px;
+  // margin: 20px 20px 0 20px;
 }
 
 .features__title {
@@ -13,8 +13,19 @@
 }
 
 .features__list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
   list-style: none;
   margin: 0;
+  padding: 0;
+
+  @media (min-width: $tablet-width) {
+  }
+
+  @media (min-width: $desktop-width) {
+    flex-wrap: nowrap;
+  }
 }
 
 .features__list a {
@@ -23,6 +34,33 @@
 
 .features__item {
   background-color: $grey;
+  //width: 280px;
+  width: 100%;
+  margin-bottom: 20px;
+
+  @media (min-width: $tablet-width) {
+    //width: 708px;
+    //width: 100%;
+    //на мобильной ширине прописал размеры блоков в px,
+    //потом поменял на %,
+    //добавил состояние на планшетной ширине,
+    //потом понял, что если вначале указать размер в %,
+    //то на остальных ширинах ничего уже указывать не нужно (по крайней мере в этом макете) :)
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .features__item {
+    margin-bottom: 0;
+  }
+
+  .features__item:first-child {
+    margin-right: 80px;
+  }
+}
+
+.features__item:last-child {
+  margin-bottom: 0;
 }
 
 .features__item p {
