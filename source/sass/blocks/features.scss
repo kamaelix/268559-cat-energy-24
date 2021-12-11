@@ -20,9 +20,6 @@
   margin: 0;
   padding: 0;
 
-  @media (min-width: $tablet-width) {
-  }
-
   @media (min-width: $desktop-width) {
     flex-wrap: nowrap;
   }
@@ -37,16 +34,6 @@
   //width: 280px;
   width: 100%;
   margin-bottom: 20px;
-
-  @media (min-width: $tablet-width) {
-    //width: 708px;
-    //width: 100%;
-    //на мобильной ширине прописал размеры блоков в px,
-    //потом поменял на %,
-    //добавил состояние на планшетной ширине,
-    //потом понял, что если вначале указать размер в %,
-    //то на остальных ширинах ничего уже указывать не нужно (по крайней мере в этом макете) :)
-  }
 }
 
 @media (min-width: $desktop-width) {
