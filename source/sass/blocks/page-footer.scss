@@ -5,10 +5,32 @@
 .page-footer__container {
   outline: 2px dashed $blue;
   padding: 28px 20px 26px 20px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  flex-grow: 1;
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+  }
 }
 
 .page-footer__copyright a {
   font-family: $second-font;
   font-size: 16px;
   line-height: auto;
+}
+
+.page-footer__logo {
+  outline: 2px dashed $pink;
+}
+
+.page-footer__social {
+  outline: 2px dashed $green;
+}
+
+.page-footer__copyright {
+  outline: 2px dashed $white;
 }

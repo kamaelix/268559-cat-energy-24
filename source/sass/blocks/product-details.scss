@@ -1,6 +1,6 @@
 .product-details__container {
   outline: 2px dashed $red;
-  margin: 0 20px 0 20px;
+  //margin: 0 20px 0 20px;
 }
 
 .product-details__title {
@@ -12,14 +12,34 @@
 }
 
 .product-details__list {
+  display: grid;
+  grid-template-columns: 1fr;
   list-style: none;
-  padding-bottom: 42px;
+  padding: 0;
   margin: 0;
+
+  @media (min-width: $tablet-width) {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+  }
+}
+
+.product-details__item {
+  outline: 2px dashed $pink;
 }
 
 .product-details__item p {
   font-family: $second-font;
+  //display: inline-block;
+  //vertical-align: top;
   font-size: 14px;
   line-height: 18px;
   font-weight: 400;
+  padding: 0;
+  margin: 0;
 }
