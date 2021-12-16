@@ -6,6 +6,10 @@
   text-align: left;
 }
 
+.nutrition-select__container {
+  padding: 0;
+}
+
 .nutrition-select__title {
   font-size: 36px;
   line-height: 36px;
@@ -34,4 +38,10 @@
   line-height: 16px;
   text-transform: none;
   text-align: center;
+}
+
+.nutrition-purpose__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }

@@ -1,5 +1,8 @@
 .page-footer {
   background-color: #d9d9d9;
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .page-footer__container {
@@ -33,4 +36,10 @@
 
 .page-footer__copyright {
   outline: 2px dashed $white;
+}
+
+.social__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
