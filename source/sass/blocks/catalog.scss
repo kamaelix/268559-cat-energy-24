@@ -4,10 +4,25 @@
 
 .products__container {
   outline: 2px dashed $red;
+  padding: 0;
 }
 
 .catalog-list {
   outline: 3px dashed $blue;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  display: grid;
+  grid-template-columns: 1fr;
+
+  @media (min-width: $tablet-width) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 
 .products-item {
