@@ -1,5 +1,5 @@
 .page-footer {
-  background-color: #d9d9d9;
+  background-color: $basic-grey;
   max-width: 1440px;
   margin-left: auto;
   margin-right: auto;
@@ -19,26 +19,97 @@
   }
 }
 
-.page-footer__copyright a {
-  font-family: $second-font;
-  font-size: 16px;
-  line-height: auto;
-}
-
 .page-footer__logo {
-  outline: 2px dashed $pink;
+  display: flex;
+  justify-content: center;
+  padding-top: 40px;
+  padding-bottom: 30px;
+  margin: 0;
+
+  @media (max-width: $mobile-width-only) {
+    border-bottom: 1px solid $dark-grey;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding-top: 63px;
+    padding-bottom: 60px;
+  }
 }
 
 .page-footer__social {
-  outline: 2px dashed $green;
-}
-
-.page-footer__copyright {
-  outline: 2px dashed $white;
+  @media (max-width: $mobile-width-only) {
+    border-bottom: 1px solid $dark-grey;
+  }
 }
 
 .social__list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
   list-style: none;
+  width: 130px;
+  padding: 20px 0;
+  margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 56px;
+    padding-bottom: 58px;
+  }
+}
+
+.social__link--vkontakte img {
+  width: 22px;
+  height: 12px;
+
+  @media (min-width: $tablet-width) {
+    width: 28px;
+    height: 17px;
+  }
+}
+
+.social-link--instagram img {
+  width: 16px;
+  height: 16px;
+
+  @media (min-width: $tablet-width) {
+    width: 23px;
+    height: 23px;
+  }
+}
+
+.social-link--facebook img {
+  width: 10px;
+  height: 18px;
+
+  @media (min-width: $tablet-width) {
+    width: 13px;
+    height: 27px;
+  }
+}
+
+.page-footer__copyright {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22px 0;
   margin: 0;
-  padding: 0;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 56px;
+    padding-bottom: 56px;
+  }
+}
+
+.page-footer__copyright a {
+  color: $special_dark-grey;
+  font-family: $second-font;
+  font-size: 16px;
+}
+
+.page-footer__copyright img {
+  @media (min-width: $tablet-width) {
+    margin-left: 22px;
+  }
 }

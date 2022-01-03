@@ -1,11 +1,35 @@
+.contacts {
+  position: relative;
+}
+
 .contacts__container {
   outline: 2px dashed $red;
-  margin: 0;
+
+  @media (min-width: $desktop-width) {
+    position: absolute;
+    top: 95px;
+    left: 110px;
+    background-color: $white;
+    height: 198px;
+    width: 565px;
+    padding: 0;
+  }
+}
+
+.contacts-details {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   padding: 28px 0 26px 0;
 
   @media (min-width: $tablet-width) {
-    padding-left: 40px;
-    padding-right: 37px;
+    padding: 56px 40px 62px 40px;
+    margin: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 56px 80px 62px 80px;
+    margin: 0;
   }
 }
 
@@ -13,4 +37,11 @@
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
+  margin: 0;
+}
+
+.contacts-details address {
+  font-family: $second-font;
+  font-size: 14px;
+  line-height: 20px;
 }

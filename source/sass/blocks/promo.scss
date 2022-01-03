@@ -1,14 +1,40 @@
 .promo {
   outline: 2px dashed $red;
-  background-color: rgba(104, 183, 56, 0.85);
+}
+
+.promo .button {
+  @media (min-width: $tablet-width) {
+    width: 244px;
+    height: 54px;
+    position: relative;
+    bottom: 596px;
+    left: 120px;
+    font-size: 20px;
+    line-height: 20px;
+    font-weight: 400;
+  }
+
+  @media (min-width: $desktop-width) {
+    left: 190px;
+  }
 }
 
 .promo__container {
   outline: 2px dotted $blue;
 
-  background-image: url("../../img/index-background-desktop-2.jpg"),
-    url("../../img/index-can-mobile-1.jpg");
-  background-repeat: no-repeat;
+  background-image: url("../img/Rectangle-18.png"),
+    url("../img/index-background-desktop-22.png");
+  background-position: center, center;
+  background-repeat: repeat, no-repeat;
+
+  @media (min-width: $tablet-width) {
+    background-image: none;
+  }
+
+  @media (max-width: $mobile-width-only) {
+    height: 302px;
+    background-color: rgba(104, 183, 56, 0.85);
+  }
 }
 
 .promo__intro {
@@ -17,8 +43,22 @@
   line-height: 36px;
   font-weight: 400;
   text-align: center;
-  //margin: 0 35px 0 35px;
   padding-top: 25px;
+  margin: 0 auto 0 auto;
+
+  @media (min-width: $tablet-width) {
+    color: $black;
+    font-size: 60px;
+    line-height: 60px;
+    font-weight: 400;
+    text-align: left;
+    padding: 60px 0 0 88px;
+    margin: 0 auto 0 auto;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 80px;
+  }
 }
 
 .promo__slogan {
@@ -28,6 +68,35 @@
   font-weight: 400;
   text-align: center;
   text-transform: uppercase;
-  margin: 0 60px 25px 60px;
   padding-top: 25px;
+  margin: 0 auto 25px auto;
+
+  @media (min-width: $tablet-width) {
+    color: $black;
+    font-size: 20px;
+    line-height: 20px;
+    font-weight: 400;
+    text-align: left;
+    padding: 40px 0 0 88px;
+    margin: 0 auto 20px auto;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 80px;
+  }
+}
+
+.promo__can-mobile img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media (max-width: $mobile-width-only) {
+    margin-top: -135px;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 709px;
+    height: 609px;
+  }
 }
