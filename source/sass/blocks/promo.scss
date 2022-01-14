@@ -1,11 +1,13 @@
 .promo {
-  outline: 2px dashed $red;
+  @media (max-width: $mobile-width-only) {
+    margin-bottom: 20px;
+  }
 }
 
 .promo .button {
   @media (min-width: $tablet-width) {
     width: 244px;
-    height: 54px;
+    min-height: 54px;
     position: relative;
     bottom: 596px;
     left: 120px;
@@ -20,8 +22,6 @@
 }
 
 .promo__container {
-  outline: 2px dotted $blue;
-
   background-image: url("../img/Rectangle-18.png"),
     url("../img/index-background-desktop-22.png");
   background-position: center, center;

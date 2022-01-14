@@ -1,5 +1,4 @@
 var navBB = document.querySelector(".main-nav");
-console.log(navBB);
 var navToggle = document.querySelector(".main-nav__toggler");
 
 navBB.classList.remove("main-nav--nojs");

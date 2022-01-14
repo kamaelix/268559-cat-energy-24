@@ -5,47 +5,39 @@
 }
 
 .page-header__logo--wrapper {
-  outline: 2px dotted $red;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  height: 66px;
+  min-height: 66px;
 }
 
 .page-header__logo {
-  outline: 2px dotted $pink;
-  height: 38px;
+  min-height: 38px;
   margin-top: auto;
   margin-bottom: auto;
   margin-left: 20px;
 
   @media (min-width: $tablet-width) {
-    height: 52px;
+    min-height: 52px;
+    margin-left: 0;
   }
 
   @media (min-width: $desktop-width) {
-    height: 59px;
+    min-height: 59px;
   }
 }
 
 .page-header__logo-2 {
-  outline: 2px dotted $pink;
-  height: 18px;
+  min-height: 18px;
   margin-top: auto;
   margin-bottom: auto;
 
   @media (min-width: $tablet-width) {
-    margin-left: 12px;
+    display: none;
   }
 }
 
-.main-nav {
-  outline: 2px dashed $green;
-}
-
 .main-nav__list {
-  outline: 2px dashed $blue;
-  list-style: none;
   margin: 0;
   padding: 0;
   position: relative;
@@ -58,7 +50,6 @@
 }
 
 .main-nav__list a {
-  position: relative;
   display: block;
   padding-top: 22px;
   padding-bottom: 24px;
@@ -140,7 +131,7 @@
   }
 }
 
-.main-nav--closed .main-nav__toggler::before {
+.main-nav .main-nav__toggler::before {
   @media (max-width: $mobile-width-only) {
     content: "";
     position: absolute;
@@ -157,10 +148,10 @@
   @media (max-width: $mobile-width-only) {
     position: absolute;
     top: 66px;
+    left: 0;
     width: 100%;
     z-index: 10;
     background-color: $white;
-    margin-left: -20px;
     min-height: 198px;
   }
 }

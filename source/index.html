@@ -13,16 +13,26 @@
           <nav class="main-nav main-nav--closed">
             <div class="page-header__logo--wrapper">
               <a class="page-header__logo">
-                <img
-                  src="img/logo-mobile.svg"
-                  width="33"
-                  height="38"
-                  alt="Интернет-магазин Кэт энерджи"
-                />
+                <picture>
+                  <source
+                    srcset="img/logo-cat_tablet.svg"
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="img/logo-cat_desktop.svg"
+                    media="(min-width: 1440px)"
+                  />
+                  <img
+                    src="img/logo-cat_mobile.svg"
+                    width="33"
+                    height="38"
+                    alt="Интернет-магазин Кэт энерджи"
+                  />
+                </picture>
               </a>
               <a class="page-header__logo-2">
                 <img
-                  src="img/logo_2.png"
+                  src="img/logo-cat-energy_mobile.svg"
                   width="101"
                   height="18"
                   alt="Логотип"
@@ -78,12 +88,22 @@
             <h2 class="visually-hidden">Основные типы программ питания</h2>
             <ul class="features__list">
               <li class="features__item features__item--slim">
-                <img
-                  class="features__item--slim__icon"
-                  src="img/cat_back-1.png"
-                  width="50"
-                  height="50"
-                />
+                <picture class="features__item--slim__icon">
+                  <source
+                    srcset="img/cat-slim_tablet.svg"
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="img/cat-slim_desktop.svg"
+                    media="(min-width: 1440px)"
+                  />
+                  <img
+                    src="img/cat-slim_mobile.svg"
+                    width="50"
+                    height="50"
+                    alt=""
+                  />
+                </picture>
                 <h3 class="features__title">Похудение</h3>
                 <p>
                   Ваш кот весит больше собаки и почти утратил способность лазить
@@ -101,12 +121,22 @@
                 </a>
               </li>
               <li class="features__item features__item--pro">
-                <img
-                  class="features__item--pro__icon"
-                  src="img/cat_back-2.png"
-                  width="67"
-                  height="50"
-                />
+                <picture class="features__item--pro__icon">
+                  <source
+                    srcset="img/cat-pro_tablet.svg"
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="img/cat-pro_desktop.svg"
+                    media="(min-width: 1440px)"
+                  />
+                  <img
+                    src="img/cat-pro_mobile.svg"
+                    width="67"
+                    height="50"
+                    alt=""
+                  />
+                </picture>
                 <h3 class="features__title">Набор массы</h3>
                 <p>
                   Заработать авторитет среди дворовых котов и даже собак? Серия
@@ -180,24 +210,35 @@
                 спит по 16 часов в день.
               </p>
               <div class="main-figures__weight-loss">
-                <span>5 кг</span>
-                <span>снижение веса</span>
+                <span class="main-figures__weight-loss--data">5 кг</span>
+                <span class="main-figures__weight-loss--legend"
+                  >снижение веса</span
+                >
               </div>
               <div class="main-figures__time-spent">
-                <span>60 дней</span>
-                <span>затрачено времени</span>
+                <span class="main-figures__time-spent--data">60 дней</span>
+                <span class="main-figures__time-spent--legend"
+                  >затрачено времени</span
+                >
               </div>
               <div class="main-figures__money-spent">
                 <span class="expenses">Затраты на питание: 15 000 руб.</span>
               </div>
             </div>
             <div class="container results__container">
-              <img
-                src="img/before-mobile_1.png"
-                width="311"
-                height="232"
-                alt="кот Борис до программы питания"
-              />
+              <picture class="results__container--picture">
+                <source
+                  srcset="img/cat-example-both_tablet.png"
+                  media="(min-width: 768px)"
+                />
+                <img
+                  src="img/cat-example-before_mobile.png"
+                  width="280"
+                  height="232"
+                  alt="кот Борис до программы питания"
+                />
+              </picture>
+
               <div class="results__container--controls">
                 <span>Было</span>
                 <input type="range" min="0" max="100" step="1" value="50" />
@@ -228,14 +269,16 @@
           <h2 class="visually-hidden">Как до нас добраться</h2>
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3997.2075745066522!2d30.3186700332929
-            6!3d59.93871648187617!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1640901861730!5m2!
+            6!3d59.93871648187617!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b
+            32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1640901861730!5m2!
             1sru!2sru"
             width="600"
             height="450"
             style="border: 0"
             allowfullscreen=""
             loading="lazy"
-          ></iframe>
+          >
+          </iframe>
         </section>
       </main>
 

@@ -22,7 +22,6 @@
 }
 
 .main-container {
-  outline: 2px dashed $pink;
   max-width: 1440px;
   min-width: 320px;
   margin-left: auto;
@@ -53,6 +52,11 @@
 
 a {
   text-decoration: none;
+}
+
+ul,
+ol {
+  list-style: none;
 }
 
 .button {

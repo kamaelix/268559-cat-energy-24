@@ -6,8 +6,6 @@
 }
 
 .page-footer__container {
-  outline: 2px dashed $blue;
-
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -47,7 +45,6 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  list-style: none;
   width: 130px;
   padding: 20px 0;
   margin: 0 auto;
