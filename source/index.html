@@ -73,12 +73,22 @@
             <p class="promo__slogan">Занялся собой? Займись котом!</p>
           </div>
           <div class="container promo__can-mobile">
-            <img
-              src="img/index-can-mobile-1.png"
-              width="280"
-              height="270"
-              alt="Банка с кормом"
-            />
+            <picture>
+              <source
+                srcset="img/promo-can_tablet.png"
+                media="(min-width: 768px)"
+              />
+              <source
+                srcset="img/promo-can_desktop.png"
+                media="(min-width: 1440px)"
+              />
+              <img
+                src="img/promo-can_mobile.png"
+                width="280"
+                height="270"
+                alt="Банка с кормом"
+              />
+            </picture>
           </div>
           <button class="button">Подобрать программу</button>
         </section>
@@ -222,13 +232,16 @@
                 >
               </div>
               <div class="main-figures__money-spent">
-                <span class="expenses">Затраты на питание: 15 000 руб.</span>
+                <span class="expenses"
+                  >Затраты на питание:
+                  <span class="expenses__data">15 000 руб.</span></span
+                >
               </div>
             </div>
             <div class="container results__container">
               <picture class="results__container--picture">
                 <source
-                  srcset="img/cat-example-both_tablet.png"
+                  srcset="img/cat-example_tablet_desktop.png"
                   media="(min-width: 768px)"
                 />
                 <img
@@ -300,12 +313,18 @@
                   href="https://vk.com/htmlacademy"
                 >
                   <span class="visually-hidden">Вконтакте</span>
-                  <img
-                    src="img/icon_vkontakte.svg"
-                    alt="Вконтакте"
-                    width="22"
-                    height="12"
-                  />
+                  <picture>
+                    <source
+                      srcset="img/icon-vkontakte_tablet.svg"
+                      media="(min-width: 768px)"
+                    />
+                    <img
+                      src="img/icon-vkontakte_mobile.svg"
+                      alt="Вконтакте"
+                      width="23"
+                      height="16"
+                    />
+                  </picture>
                 </a>
               </li>
               <li class="social__item">
@@ -314,12 +333,18 @@
                   href="https://www.instagram.com/htmlacademy"
                 >
                   <span class="visually-hidden">Инстаграм</span>
-                  <img
-                    src="img/icon_instagram.svg"
-                    alt="Инстаграм"
-                    width="16"
-                    height="16"
-                  />
+                  <picture>
+                    <source
+                      srcset="img/icon-instagram_tablet.svg"
+                      media="(min-width: 768px)"
+                    />
+                    <img
+                      src="img/icon-instagram_mobile.svg"
+                      alt="Инстаграм"
+                      width="16"
+                      height="16"
+                    />
+                  </picture>
                 </a>
               </li>
               <li class="social__item">
@@ -328,12 +353,18 @@
                   href="https://www.facebook.com/htmlacademy"
                 >
                   <span class="visually-hidden">Фейсбук</span>
-                  <img
-                    src="img/icon_facebook.svg"
-                    alt="Фейсбук"
-                    width="10"
-                    height="18"
-                  />
+                  <picture>
+                    <source
+                      srcset="img/icon-facebook_tablet.svg"
+                      media="(min-width: 768px)"
+                    />
+                    <img
+                      src="img/icon-facebook_mobile.svg"
+                      alt="Фейсбук"
+                      width="22"
+                      height="22"
+                    />
+                  </picture>
                 </a>
               </li>
             </ul>

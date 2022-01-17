@@ -99,4 +99,9 @@
     width: 709px;
     height: 609px;
   }
+
+  @media (min-width: $desktop-width) {
+    width: 552px;
+    height: 499px;
+  }
 }
