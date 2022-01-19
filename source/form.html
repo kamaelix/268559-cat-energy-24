@@ -13,16 +13,26 @@
           <nav class="main-nav main-nav--closed">
             <div class="page-header__logo--wrapper">
               <a class="page-header__logo">
-                <img
-                  src="img/logo-mobile.svg"
-                  width="33"
-                  height="38"
-                  alt="Интернет-магазин Кэт энерджи"
-                />
+                <picture>
+                  <source
+                    srcset="img/logo-cat_tablet.svg"
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="img/logo-cat_desktop.svg"
+                    media="(min-width: 1440px)"
+                  />
+                  <img
+                    src="img/logo-cat_mobile.svg"
+                    width="33"
+                    height="38"
+                    alt="Интернет-магазин Кэт энерджи"
+                  />
+                </picture>
               </a>
               <a class="page-header__logo-2">
                 <img
-                  src="./img/logo_2.png"
+                  src="img/logo-cat-energy_mobile.svg"
                   width="101"
                   height="18"
                   alt="Логотип"
@@ -37,10 +47,10 @@
                 <li class="main-nav__item">
                   <a href="./index.html">Главная</a>
                 </li>
-                <li class="main-nav__item">
+                <li class="main-nav__item main-nav__item--current">
                   <a href="./catalog.html">Каталог продукции</a>
                 </li>
-                <li class="main-nav__item main-nav__item--current">
+                <li class="main-nav__item">
                   <a href="./form.html">Подбор программы</a>
                 </li>
               </ul>
@@ -225,8 +235,12 @@
       <footer class="page-footer">
         <div class="container page-footer__container">
           <div class="page-footer__logo">
-            <p>CAT ENERGY</p>
-            <!--здесь будет SVG иконка-->
+            <img
+              src="./img/footer-logo_cat-energy.svg"
+              width="128"
+              height="24"
+              alt=""
+            />
           </div>
           <div class="page-footer__social social">
             <ul class="social__list">
@@ -236,12 +250,18 @@
                   href="https://vk.com/htmlacademy"
                 >
                   <span class="visually-hidden">Вконтакте</span>
-                  <img
-                    src="./img/icon_vkontakte.svg"
-                    alt="Вконтакте"
-                    width="22"
-                    height="12"
-                  />
+                  <picture>
+                    <source
+                      srcset="img/icon-vkontakte_tablet.svg"
+                      media="(min-width: 768px)"
+                    />
+                    <img
+                      src="img/icon-vkontakte_mobile.svg"
+                      alt="Вконтакте"
+                      width="23"
+                      height="16"
+                    />
+                  </picture>
                 </a>
               </li>
               <li class="social__item">
@@ -250,12 +270,18 @@
                   href="https://www.instagram.com/htmlacademy"
                 >
                   <span class="visually-hidden">Инстаграм</span>
-                  <img
-                    src="./img/icon_instagram.svg"
-                    alt="Инстаграм"
-                    width="16"
-                    height="16"
-                  />
+                  <picture>
+                    <source
+                      srcset="img/icon-instagram_tablet.svg"
+                      media="(min-width: 768px)"
+                    />
+                    <img
+                      src="img/icon-instagram_mobile.svg"
+                      alt="Инстаграм"
+                      width="16"
+                      height="16"
+                    />
+                  </picture>
                 </a>
               </li>
               <li class="social__item">
@@ -264,12 +290,18 @@
                   href="https://www.facebook.com/htmlacademy"
                 >
                   <span class="visually-hidden">Фейсбук</span>
-                  <img
-                    src="./img/icon_facebook.svg"
-                    alt="Фейсбук"
-                    width="10"
-                    height="18"
-                  />
+                  <picture>
+                    <source
+                      srcset="img/icon-facebook_tablet.svg"
+                      media="(min-width: 768px)"
+                    />
+                    <img
+                      src="img/icon-facebook_mobile.svg"
+                      alt="Фейсбук"
+                      width="22"
+                      height="22"
+                    />
+                  </picture>
                 </a>
               </li>
             </ul>
@@ -278,8 +310,9 @@
             <a
               class="copyright__link copyright__link--academy"
               href="https://htmlacademy.ru/intensive/adaptive"
-              >HTML Academy</a
-            >
+              >HTML Academy
+            </a>
+            <img src="./img/logo_html.svg" width="27" height="34" alt="" />
           </div>
         </div>
       </footer>

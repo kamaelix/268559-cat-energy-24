@@ -40,21 +40,22 @@
 
 .products-item {
   outline: 3px dashed $pink;
-  max-height: 209px;
+  min-height: 209px;
 
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: repeat(3, auto);
 
   @media (min-width: $tablet-width) {
-    max-height: 430px;
+    grid-template-rows: repeat(3, auto);
+    min-height: 430px;
     background-color: $basic-grey;
     padding: 0 38px 38px 38px;
     margin-bottom: 140px;
   }
 }
 
-.products-item img {
+.products-item picture {
   grid-column-start: 1;
   grid-column-end: 2;
   grid-row-start: 1;
@@ -69,12 +70,38 @@
     grid-column-end: 3;
     grid-row-start: 1;
     grid-row-end: 1;
+    align-self: end;
+  }
+}
 
+.products-item:nth-child(odd) picture {
+  @media (min-width: $tablet-width) {
     margin-top: -50px;
   }
 }
 
+.products-item:nth-child(even) picture {
+  @media (min-width: $tablet-width) {
+    margin-top: -80px;
+  }
+}
+
+.product:nth-child(odd) img {
+  @media (min-width: $tablet-width) {
+    width: 162px;
+    min-height: 172px;
+  }
+}
+
+.product:nth-child(even) img {
+  @media (min-width: $tablet-width) {
+    width: 168px;
+    min-height: 200px;
+  }
+}
+
 .products-item p {
+  width: 74px;
   grid-column-start: 2;
   grid-column-end: 3;
   grid-row-start: 1;
@@ -84,7 +111,11 @@
   line-height: 20px;
   text-transform: uppercase;
 
+  margin: 0;
+  padding-top: 20px;
+
   @media (min-width: $tablet-width) {
+    width: 150px;
     grid-column-start: 1;
     grid-column-end: 3;
     grid-row-start: 2;
@@ -94,6 +125,8 @@
     line-height: 24px;
 
     text-align: center;
+
+    margin: 0 auto 20px auto;
   }
 }
 
@@ -111,6 +144,7 @@
     grid-column-end: 3;
     grid-row-start: 3;
     grid-row-end: 4;
+    margin: 0 0 33px 0;
   }
 }
 
@@ -152,6 +186,55 @@
     grid-column-end: 3;
     grid-row-start: 4;
     grid-row-end: 5;
-    text-align: center;
+    align-self: end;
   }
+}
+
+.product_show-all {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: nowrap;
+  justify-content: end;
+}
+
+.product_show-all span {
+  position: relative;
+  width: 5px;
+  height: 10px;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: -20px;
+    left: -12px;
+    width: 30px;
+    height: 2px;
+    background-color: #d3d3d3;
+  }
+
+  &::after {
+    transform: rotate(90deg);
+  }
+}
+
+.product_show-all p {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.product_show-all .info {
+  font-family: "Arial", sans-serif;
+  font-size: 12px;
+  line-height: 16px;
+  text-transform: none;
+  padding-top: 0;
+  margin-bottom: 21px;
+}
+
+.product_show-all .button {
+  color: $black;
+  background-color: $basic-grey;
 }
