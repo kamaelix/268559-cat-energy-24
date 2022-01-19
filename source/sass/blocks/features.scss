@@ -1,22 +1,41 @@
-.features__container {
-  outline: 2px dashed $red;
-  // margin: 20px 20px 0 20px;
-}
-
 .features__title {
   color: $dark;
   font-size: 24px;
   line-height: 37px;
   font-weight: 400;
   text-transform: uppercase;
-  margin: 0;
+
+  @media (min-width: $tablet-width) {
+    font-size: 36px;
+    line-height: 36px;
+    font-weight: 400;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 45px;
+  }
+}
+
+.features__item--slim h3 {
+  margin: auto auto auto 20px;
+
+  @media (min-width: $tablet-width) {
+    margin: auto auto auto 0;
+  }
+}
+
+.features__item--pro h3 {
+  margin: auto auto auto 29px;
+
+  @media (min-width: $tablet-width) {
+    margin: auto auto auto 0;
+  }
 }
 
 .features__list {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  list-style: none;
   margin: 0;
   padding: 0;
 
@@ -30,36 +49,163 @@
 }
 
 .features__item {
-  background-color: $grey;
-  //width: 280px;
+  display: grid;
+  grid-template-columns: 50px 1fr;
+  grid-template-rows: 50px auto 25px;
+
+  background-color: $basic-grey;
   width: 100%;
   margin-bottom: 20px;
-}
+  padding: 24px 20px 22px 20px;
 
-@media (min-width: $desktop-width) {
-  .features__item {
-    margin-bottom: 0;
+  @media (min-width: $tablet-width) {
+    grid-template-columns: auto 268px;
+    grid-template-rows: 36px auto 38px;
+    padding: 77px 28px 57px 52px;
   }
 
-  .features__item:first-child {
+  @media (min-width: $desktop-width) {
+    grid-template-columns: 134px auto;
+    grid-template-rows: 106px 110px 30px;
+    padding: 47px 51px 59px 52px;
+    margin-bottom: 0;
+  }
+}
+
+.features__item:first-child {
+  @media (min-width: $desktop-width) {
     margin-right: 80px;
   }
 }
 
 .features__item:last-child {
-  margin-bottom: 0;
+  @media (min-width: $desktop-width) {
+    padding-right: 61px;
+    margin-bottom: 0;
+  }
+}
+
+.features__item--slim__icon,
+.features__item--pro__icon {
+  display: block;
+
+  @media (min-width: $tablet-width) {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 4;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+  }
 }
 
 .features__item p {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
+
   font-family: "Arial", sans-serif;
   font-size: 14px;
   line-height: 18px;
   font-weight: 400;
+
+  padding-bottom: 23px;
+
+  @media (max-width: $mobile-width-only) {
+    border-bottom: solid 2px $dark-grey;
+  }
+
+  @media (min-width: $tablet-width) {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+
+    padding-right: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-column: 1 / -1;
+    grid-row: 2 / 3;
+    margin-top: 39px;
+    padding-right: 0;
+  }
 }
 
 .features__item a {
-  font-size: 20px;
-  line-height: 24px;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 3;
+  grid-row-end: 4;
+  font-size: 16px;
+  line-height: 16px;
   font-weight: 400;
   text-transform: uppercase;
+  text-align: left;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 400;
+  }
+}
+
+.features__item picture {
+  @media (min-width: $tablet-width) {
+    margin: auto;
+  }
+}
+
+.features__item--slim__icon img {
+  width: 50px;
+  height: 53px;
+
+  @media (min-width: $tablet-width) {
+    width: 200px;
+    height: 211px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 100px;
+    height: 106px;
+    margin-left: -30px;
+  }
+}
+
+.features__item--pro__icon img {
+  width: 67px;
+  height: 50px;
+
+  @media (min-width: $tablet-width) {
+    width: 268px;
+    height: 200px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 134px;
+    height: 100px;
+    margin-left: -30px;
+  }
+}
+
+.features__link {
+  vertical-align: middle;
+  text-align: center;
+
+  @media (min-width: $desktop-width) {
+    margin-top: 27px;
+  }
+}
+
+.features__link img {
+  display: inline-block;
+  margin-left: 15px;
 }

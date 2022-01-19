@@ -10,7 +10,6 @@
   font-weight: 400;
   background-color: $white;
   color: $black;
-  min-width: 320px;
   box-sizing: border-box;
 }
 
@@ -23,10 +22,18 @@
 }
 
 .main-container {
-  outline: 2px dashed $pink;
   max-width: 1440px;
+  min-width: 320px;
   margin-left: auto;
   margin-right: auto;
+
+  @media (min-width: $desktop-width) {
+    background-image: url("../img/Rectangle-18.png"),
+      url("../img/index-background-desktop-1.png");
+    background-position: 720px 0, 720px 0;
+    background-size: 720px 694px, 720px 694px;
+    background-repeat: no-repeat, no-repeat;
+  }
 }
 
 .container {
@@ -45,4 +52,27 @@
 
 a {
   text-decoration: none;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+.button {
+  display: block;
+  color: $white;
+  text-transform: uppercase;
+  background-color: $basic-green;
+  border: none;
+  font-family: "Oswald", sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 400;
+  text-align: center;
+  padding: 15px 0;
+
+  @media (max-width: $mobile-width-only) {
+    width: 100%;
+  }
 }
