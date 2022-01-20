@@ -1,12 +1,41 @@
 .special-offer {
-  outline: 2px dotted $blue;
+  min-height: 290px;
 
-  background-color: rgba(104, 183, 56, 0.85);
-}
-
-.special-offer__container {
   background-image: url("../../img/catalog-special-offer_backpack.png");
   background-position: center;
   background-repeat: no-repeat;
   padding: 0;
+}
+
+.special-offer__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: $white;
+  font-family: $second-font;
+  font-size: 16px;
+  line-height: 20px;
+
+  background-image: url("../../img/Rectangle-17.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 290px;
+}
+
+.special-offer__container img {
+  margin-bottom: 55px;
+}
+
+.icon-gift {
+  width: 78px;
+  height: 80px;
+  background-image: url("../../img/catalog-special-offer_icon-gift.svg");
+
+  margin: 55px 0 55px 0;
+}
+
+.special-offer__container p {
+  width: 161px;
+  text-align: center;
+  margin: 0;
 }
