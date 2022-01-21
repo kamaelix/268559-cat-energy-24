@@ -1,4 +1,8 @@
 .page-header__container {
+  @media (max-width: $mobile-width-only) {
+    border-bottom: 1px solid #cdcdcd;
+  }
+
   @media (min-width: $desktop-width) {
     padding-top: 35px;
   }
