@@ -10,6 +10,17 @@
     background-image: url("../../img/catalog-special-offer_backpack__tablet.png");
     min-height: 200px;
   }
+
+  @media (min-width: $desktop-width) {
+    background-image: url("../../img/catalog-special-offer_backpack__desktop.png");
+    min-height: 288px;
+
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    left: 1160px;
+    top: 1590px;
+  }
 }
 
 .special-offer__container {
@@ -34,6 +45,13 @@
     justify-content: space-around;
     min-height: 200px;
     margin-bottom: 75px;
+  }
+
+  @media (min-width: $desktop-width) {
+    background-image: url("../../img/Rectangle-19.png");
+    flex-direction: column;
+    min-height: 288px;
+    margin: 0;
   }
 }
 

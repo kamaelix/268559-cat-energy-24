@@ -2,6 +2,10 @@
   @media (max-width: $mobile-width-only) {
     border-top: 1px solid #cdcdcd;
   }
+
+  @media (min-width: $desktop-width) {
+    margin-left: 0;
+  }
 }
 
 .additional-products h2 {
@@ -12,7 +16,12 @@
   margin: 0 0 35px 0;
 
   @media (min-width: $tablet-width) {
+    padding: 68px 0 0 0;
     padding-left: 35px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 0;
   }
 }
 
@@ -26,6 +35,14 @@
     grid-template-rows: auto auto;
     padding: 0 35px 0 35px;
   }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: 325px 325px 240px;
+    grid-template-rows: auto;
+    justify-items: start;
+    padding: 16px 0 16px 0;
+    margin: 0;
+  }
 }
 
 .additional-products__item:last-child {
@@ -36,6 +53,10 @@
   @media (min-width: $tablet-width) {
     margin-bottom: 70px;
   }
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 15px;
+  }
 }
 
 .additional-products__item p {
@@ -43,6 +64,12 @@
   line-height: 16px;
   text-transform: uppercase;
   text-align: left;
+
+  @media (min-width: $desktop-width) {
+    align-self: center;
+
+    margin: 0;
+  }
 }
 
 .additional-product__info {
@@ -65,6 +92,30 @@
     grid-template-rows: 1fr;
     text-align: end;
   }
+
+  @media (min-width: $desktop-width) {
+    justify-items: start;
+    align-items: center;
+    grid-column: 2 /3;
+    grid-row: 1 / 2;
+
+    grid-template-columns: 220px 50px;
+    grid-template-rows: 1fr;
+    margin: 0;
+  }
+}
+
+.additional-product__name {
+  @media (min-width: $desktop-width) {
+    grid-column: 1 / 2;
+  }
+}
+
+.additional-product__description {
+  @media (min-width: $desktop-width) {
+    grid-column: 2 / 3;
+    margin-left: 0;
+  }
 }
 
 .additional-products__item .button {
@@ -72,24 +123,25 @@
     grid-column: 1 / 4;
     grid-row: 2 / 3;
   }
+
+  @media (min-width: $desktop-width) {
+    grid-column: 3 / 4;
+    grid-row: 1 / 2;
+    width: 100%;
+  }
 }
 
 .additional-products__list {
   list-style: none;
   margin: 0;
   padding: 0;
+
+  @media (min-width: $desktop-width) {
+    width: fit-content;
+  }
 }
 
 @media (min-width: $desktop-width) {
-  .additional-products-and-special-offer__wrapper {
-    display: flex;
-    justify-content: space-between;
-  }
-
-  .additional-products__container {
-    width: 895px;
-  }
-
   .special-offer {
     width: 245px;
   }
