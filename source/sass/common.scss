@@ -26,7 +26,9 @@
   min-width: 320px;
   margin-left: auto;
   margin-right: auto;
+}
 
+.index-back-picture {
   @media (min-width: $desktop-width) {
     background-image: url("../img/Rectangle-18.png"),
       url("../img/index-background-desktop-1.png");

@@ -81,9 +81,14 @@
   }
 
   @media (min-width: $desktop-width) {
-    color: $white;
     margin-left: 34px;
     border-top: none;
+  }
+}
+
+.index-back-picture .main-nav__list a {
+  @media (min-width: $desktop-width) {
+    color: $white;
   }
 }
 
@@ -91,7 +96,9 @@
   @media (min-width: $tablet-width) {
     border-bottom: 2px solid $basic-green;
   }
+}
 
+.index-back-picture .main-nav__item--current a {
   @media (min-width: $desktop-width) {
     border-bottom: 2px solid $white;
   }

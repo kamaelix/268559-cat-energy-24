@@ -1,20 +1,12 @@
 .nutrition-select {
-  outline: 2px dashed $green;
   font-size: 16px;
   line-height: 18px;
   text-transform: uppercase;
   text-align: left;
-}
 
-.nutrition-select__container {
   @media (min-width: $tablet-width) {
-    padding-left: 40px;
-    padding-right: 37px;
-  }
-
-  @media (min-width: $desktop-width) {
-    padding-left: 0;
-    padding-right: 0;
+    font-size: 20px;
+    line-height: 30px;
   }
 }
 
@@ -22,22 +14,107 @@
   font-size: 36px;
   line-height: 36px;
   text-transform: none;
+
+  @media (min-width: $desktop-width) {
+    font-size: 60px;
+    line-height: 60px;
+  }
 }
 
 .nutrition-select p {
   font-size: 14px;
   line-height: 18px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
 
 .cat-data {
   margin-top: 40px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 66px;
+  }
+
+  @media (min-width: $desktop-width) {
+    position: relative;
+  }
 }
 
 .cat-data__wrapper {
+  margin-bottom: 25px;
+
   @media (min-width: $desktop-width) {
     display: flex;
     justify-content: space-between;
     flex-wrap: nowrap;
+  }
+}
+
+.cat-data__basic {
+  margin-bottom: 25px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 72px;
+  }
+}
+
+.cat-name,
+.cat-weight,
+.cat-age {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  margin-bottom: 15px;
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 20px;
+  }
+}
+
+.cat-name label,
+.cat-weight label,
+.cat-age label {
+  white-space: nowrap;
+  margin-right: 15px;
+}
+
+.cat-name input,
+.cat-weight input,
+.cat-age input {
+  font-family: $main-font;
+  color: $black;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+
+  width: 100%;
+  height: 45px;
+  border: 1px solid #e7e7e7;
+  margin: 0;
+  padding: 13px 0 13px 15px;
+  vertical-align: middle;
+
+  @media (min-width: $desktop-width) {
+    height: 52px;
+    padding: 18px 0 18px 20px;
+  }
+}
+
+.cat-name input::placeholder,
+.cat-weight input::placeholder,
+.cat-age input::placeholder {
+  font-family: $main-font;
+  color: $black;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
   }
 }
 
@@ -49,32 +126,158 @@
   }
 }
 
-fieldset {
+.nutrition-purpose {
+  @media (min-width: $tablet-width) {
+    margin-bottom: 75px;
+  }
+}
+
+.cat-data fieldset {
+  border: none;
   padding: 0;
 }
 
 .contacts__title,
 .comments__title,
 .extras__title {
+  position: relative;
+  width: 100%;
+
   font-size: 24px;
   line-height: 26px;
   text-transform: none;
+  margin-bottom: 35px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 36px;
+    line-height: 36px;
+  }
 }
 
-.cat-data span {
-  font-size: 14px;
-  line-height: 16px;
-  text-transform: none;
-  text-align: center;
+.contacts__title,
+.comments__title {
+  @media (min-width: $tablet-width) {
+    margin-bottom: 75px;
+  }
+}
+
+.extras__title {
+  @media (min-width: $tablet-width) {
+    margin-bottom: 55px;
+  }
+}
+
+.contacts__title::after,
+.comments__title::after,
+.extras__title::after {
+  position: absolute;
+  content: "";
+  top: 15px;
+  left: 170px;
+  width: 100%;
+  border-bottom: 2px solid $basic-green;
+}
+
+.contacts__title::after {
+  left: 220px;
+}
+
+.comments__title::after {
+  left: 150px;
+}
+
+.extras__title::after {
+  left: 170px;
 }
 
 .nutrition-purpose__list {
+  display: flex;
+  flex-direction: column;
+
   list-style: none;
   margin: 0;
   padding: 0;
+
+  @media (min-width: $tablet-width) {
+    padding: 18px;
+    border: 1px solid #e7e7e7;
+  }
 }
 
-.contacts {
+.nutrition-purpose__item {
+  padding-bottom: 8px;
+
+  &:last-child {
+    @media (max-width: $mobile-width-only) {
+      padding-bottom: 0;
+    }
+  }
+}
+
+.nutrition-purpose__item label {
+  cursor: pointer;
+}
+
+.nutrition-purpose__item--fake {
+  position: relative;
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #cdcdcd;
+  border-radius: 50%;
+  top: 8px;
+
+  @media (min-width: $tablet-width) {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.nutrition-purpose__item--fake::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: block;
+  width: 13.5px;
+  height: 13.5px;
+  background-color: #68b738;
+  opacity: 0;
+  transition: 0.2s;
+  border-radius: 50%;
+
+  @media (min-width: $tablet-width) {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+.nutrition-purpose__item--radio-button:checked
+  + .nutrition-purpose__item--fake::before {
+  opacity: 1;
+}
+
+.nutrition-purpose__item--text,
+.extras__item--text {
+  font-size: 16px;
+  line-height: 18px;
+  padding-left: 15px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+    padding-left: 20px;
+  }
+}
+
+.contact-me {
+  margin-bottom: 15px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 65px;
+  }
+
   @media (min-width: $desktop-width) {
     display: flex;
     justify-content: space-between;
@@ -84,17 +287,100 @@ fieldset {
 
 .e-mail,
 .phone {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+
   @media (min-width: $desktop-width) {
     width: 570px;
     margin: 0;
   }
 }
 
+.e-mail {
+  margin-bottom: 15px;
+}
+
+.e-mail label,
+.phone label {
+  white-space: nowrap;
+  margin-right: 15px;
+}
+
+.e-mail input,
+.phone input {
+  font-family: "Oswald", "Arial", sans-serif;
+  color: #000000;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  width: 100%;
+  height: 45px;
+  border: 1px solid #e7e7e7;
+  margin: 0;
+  padding: 13px 0 13px 15px;
+  vertical-align: middle;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+.e-mail input::placeholder,
+.phone input::placeholder {
+  font-family: $main-font;
+  color: $black;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+.comments {
+  margin-bottom: 25px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 65px;
+  }
+}
+
 .comments textarea {
   width: 100%;
+  min-height: 155.5px;
+
+  font-family: "Oswald", "Arial", sans-serif;
+  color: #000000;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  width: 100%;
+  height: 45px;
+  border: 1px solid #e7e7e7;
+  margin: 0;
+  padding: 13px 0 13px 15px;
+  vertical-align: middle;
+
+  @media (min-width: $tablet-width) {
+    min-height: 174px;
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
 
 .extras__list {
+  padding: 0;
+  margin: 0;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
   @media (min-width: $desktop-width) {
     display: flex;
     justify-content: flex-start;
@@ -112,5 +398,106 @@ fieldset {
 .extras__list :last-child {
   @media (min-width: $desktop-width) {
     margin-right: auto;
+  }
+}
+
+.extras__item {
+  margin-bottom: 13px;
+
+  &:last-child {
+    margin-bottom: 34px;
+
+    @media (min-width: $tablet-width) {
+      margin-bottom: 54px;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 50%;
+    margin-bottom: 32px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 325px;
+  }
+}
+
+.extras__item--fake {
+  position: relative;
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #cdcdcd;
+  top: 8px;
+
+  @media (min-width: $tablet-width) {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.extras__item--fake::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: block;
+  width: 18px;
+  height: 14px;
+  background-image: url("../../img/checkbox-active_mobile.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0;
+  transition: 0.2s;
+  border-radius: 50%;
+
+  @media (min-width: $tablet-width) {
+    width: 24px;
+    height: 19px;
+    background-image: url("../../img/checkbox-active_tablet.svg");
+  }
+}
+
+.extras__item--checkbox:checked + .extras__item--fake::before {
+  opacity: 1;
+}
+
+.cat-data .button {
+  font-size: 16px;
+  line-height: 20px;
+  margin-bottom: 20px;
+
+  @media (min-width: $tablet-width) {
+    width: 282px;
+    font-size: 20px;
+    margin-bottom: 72px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 568px;
+    margin-bottom: 82px;
+  }
+}
+
+.required-fileds {
+  display: flex;
+  justify-content: center;
+  font-family: $second-font;
+  font-size: 14px;
+  line-height: 16px;
+  text-transform: none;
+  margin-bottom: 32px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 16px;
+  }
+
+  @media (min-width: $desktop-width) {
+    position: absolute;
+    bottom: 12px;
+    left: 650px;
+    margin-bottom: 0;
   }
 }
