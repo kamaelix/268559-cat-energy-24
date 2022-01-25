@@ -253,8 +253,7 @@
   }
 }
 
-.nutrition-purpose__item--radio-button:checked
-  + .nutrition-purpose__item--fake::before {
+.nutrition-purpose__item--radio-button:checked + .nutrition-purpose__item--fake::before {
   opacity: 1;
 }
 
