@@ -1,5 +1,15 @@
 .contacts {
-  position: relative;
+  padding: 0;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media (min-width: $desktop-width) {
+    position: relative;
+  }
+}
+
+.catalog .contacts {
+  background-color: $basic-grey;
 }
 
 .contacts__container {
@@ -41,5 +51,6 @@
 .contacts-details address {
   font-family: $second-font;
   font-size: 14px;
+  font-style: normal;
   line-height: 20px;
 }

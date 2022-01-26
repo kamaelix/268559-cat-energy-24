@@ -13,16 +13,26 @@
           <nav class="main-nav main-nav--closed">
             <div class="page-header__logo--wrapper">
               <a class="page-header__logo">
-                <img
-                  src="img/logo-mobile.svg"
-                  width="33"
-                  height="38"
-                  alt="Интернет-магазин Кэт энерджи"
-                />
+                <picture>
+                  <source
+                    srcset="img/logo-cat_desktop.svg"
+                    media="(min-width: 1440px)"
+                  />
+                  <source
+                    srcset="img/logo-cat_tablet.svg"
+                    media="(min-width: 768px)"
+                  />
+                  <img
+                    src="img/logo-cat_mobile.svg"
+                    width="33"
+                    height="38"
+                    alt="Интернет-магазин Кэт энерджи"
+                  />
+                </picture>
               </a>
               <a class="page-header__logo-2">
                 <img
-                  src="./img/logo_2.png"
+                  src="img/logo-cat-energy_mobile.svg"
                   width="101"
                   height="18"
                   alt="Логотип"
@@ -50,183 +60,259 @@
       </header>
 
       <main class="page-main">
-        <div class="container page-main__container">
-          <h1 class="visually-hidden">Анкета подбора программы</h1>
-          <section class="nutrition-select">
-            <div class="container nutrition-select__container">
-              <h2 class="visually-hidden">
-                Форма для заполнения данных о вашем коте
-              </h2>
-              <h3 class="nutrition-select__title">Подбор программы</h3>
-              <p>
-                Заполните анкету, и мы подберем программу питания для вашего
-                кота
-              </p>
-              <form
-                class="cat-data"
-                method="get"
-                action="https://echo.htmlacademy.ru"
-              >
-                <div class="cat-data__wrapper">
-                  <fieldset>
-                    <div class="cat-data__basic">
-                      <div class="cat-name">
-                        <label for="cat-name-field">Имя:</label>
-                        <input
-                          id="cat-name-field"
-                          type="text"
-                          name="name"
-                          placeholder="Барсик"
-                        />
-                      </div>
-                      <div class="cat-weight">
-                        <label for="cat-weight-field">Вес (кг):</label>
-                        <input
-                          id="cat-weight-field"
-                          type="text"
-                          name="name"
-                          placeholder="7"
-                        />
-                      </div>
-                      <div class="cat-age">
-                        <label for="cat-age-field">Возраст (лет):</label>
-                        <input
-                          id="cat-age-field"
-                          type="text"
-                          name="name"
-                          placeholder="7"
-                        />
-                      </div>
+        <h1 class="visually-hidden">Анкета подбора программы</h1>
+        <section class="nutrition-select">
+          <div class="container nutrition-select__container">
+            <h2 class="visually-hidden">
+              Форма для заполнения данных о вашем коте
+            </h2>
+            <h3 class="nutrition-select__title">Подбор программы</h3>
+            <p>
+              Заполните анкету, и мы подберем<br />
+              программу питания для вашего кота
+            </p>
+            <form
+              class="cat-data"
+              method="get"
+              action="https://echo.htmlacademy.ru"
+            >
+              <div class="cat-data__wrapper">
+                <fieldset>
+                  <div class="cat-data__basic">
+                    <div class="cat-name">
+                      <label for="cat-name-field">Имя:&#42;</label>
+                      <input
+                        id="cat-name-field"
+                        type="text"
+                        name="name"
+                        placeholder="Барсик"
+                      />
                     </div>
-                  </fieldset>
-                  <fieldset>
-                    <div class="nutrition-purpose">
-                      <ul class="nutrition-purpose__list">
-                        <li class="nutrition-purpose__item">
-                          <label for="weight-loss">Похудение</label>
+                    <div class="cat-weight">
+                      <label for="cat-weight-field">Вес (кг):&#42;</label>
+                      <input
+                        id="cat-weight-field"
+                        type="text"
+                        name="name"
+                        placeholder="7"
+                      />
+                    </div>
+                    <div class="cat-age">
+                      <label for="cat-age-field">Возраст (лет):</label>
+                      <input
+                        id="cat-age-field"
+                        type="text"
+                        name="name"
+                        placeholder="7"
+                      />
+                    </div>
+                  </div>
+                </fieldset>
+                <fieldset>
+                  <div class="nutrition-purpose">
+                    <ul class="nutrition-purpose__list">
+                      <li class="nutrition-purpose__item">
+                        <label
+                          for="weight-loss"
+                          class="nutrition-purpose__item--label"
+                        >
                           <input
+                            class="visually-hidden nutrition-purpose__item--radio-button"
                             type="radio"
                             id="weight-loss"
                             name="nutrition-purpose"
                             value="1"
                             checked
                           />
-                        </li>
-                        <li class="nutrition-purpose__item">
-                          <label for="weight-gain">Набор массы</label>
+                          <span class="nutrition-purpose__item--fake"></span>
+                          <span class="nutrition-purpose__item--text"
+                            >Похудение</span
+                          >
+                        </label>
+                      </li>
+                      <li class="nutrition-purpose__item">
+                        <label
+                          for="weight-gain"
+                          class="nutrition-purpose__item--label"
+                        >
                           <input
+                            class="visually-hidden nutrition-purpose__item--radio-button"
                             type="radio"
                             id="weight-gain"
                             name="nutrition-purpose"
                             value="2"
+                            checked
                           />
-                        </li>
-                        <li class="nutrition-purpose__item">
-                          <label for="no-idea">Не знаю (нужен ваш совет)</label>
+                          <span class="nutrition-purpose__item--fake"></span>
+                          <span class="nutrition-purpose__item--text"
+                            >Набор массы</span
+                          >
+                        </label>
+                      </li>
+                      <li class="nutrition-purpose__item">
+                        <label
+                          for="no-idea"
+                          class="nutrition-purpose__item--label"
+                        >
                           <input
+                            class="visually-hidden nutrition-purpose__item--radio-button"
                             type="radio"
                             id="no-idea"
                             name="nutrition-purpose"
                             value="3"
+                            checked
                           />
-                        </li>
-                      </ul>
-                    </div>
-                  </fieldset>
+                          <span class="nutrition-purpose__item--fake"></span>
+                          <span class="nutrition-purpose__item--text"
+                            >Не знаю (нужен ваш совет)</span
+                          >
+                        </label>
+                      </li>
+                    </ul>
+                  </div>
+                </fieldset>
+              </div>
+              <fieldset>
+                <legend class="contacts__title">
+                  Контактные данные (владельца кота)
+                </legend>
+                <div class="contact-me">
+                  <div class="e-mail">
+                    <label for="e-mail">e-mail:&#42;</label>
+                    <input
+                      id="e-mail"
+                      type="text"
+                      name="e-mail"
+                      placeholder="kuklachev@gmail.com"
+                    />
+                  </div>
+                  <div class="phone">
+                    <label for="phone">Телефон:&#42;</label>
+                    <input
+                      id="phone"
+                      type="text"
+                      name="phone"
+                      placeholder="8(960)900-60-90"
+                    />
+                  </div>
                 </div>
-                <fieldset>
-                  <legend class="contacts__title">
-                    Контактные данные (владельца кота)
-                  </legend>
-                  <div class="contacts">
-                    <div class="e-mail">
-                      <label for="e-mail">e-mail:*</label>
-                      <input
-                        id="e-mail"
-                        type="text"
-                        name="e-mail"
-                        placeholder="kuklachev@gmail.com"
-                      />
-                    </div>
-                    <div class="phone">
-                      <label for="phone">Телефон:*</label>
-                      <input
-                        id="phone"
-                        type="text"
-                        name="phone"
-                        placeholder="8(960)900-60-90"
-                      />
-                    </div>
-                  </div>
-                </fieldset>
-                <fieldset>
-                  <legend class="comments__title">Комментарий</legend>
-                  <div class="comments">
-                    <textarea rows="6" cols="36">
+              </fieldset>
+              <fieldset>
+                <legend class="comments__title">Комментарий</legend>
+                <div class="comments">
+                  <textarea rows="6" cols="36">
 Расскажите обо всех повадках кота</textarea
-                    >
-                  </div>
-                </fieldset>
-                <fieldset>
-                  <legend class="extras__title">Дополнительно</legend>
-                  <div class="extras">
-                    <div class="extras__list">
-                      <div class="extras__item-wrapper">
+                  >
+                </div>
+              </fieldset>
+              <fieldset>
+                <legend class="extras__title">Дополнительно</legend>
+                <div class="extras">
+                  <ul class="extras__list">
+                    <li class="extras__item">
+                      <label for="sweetener" class="extras__item--label">
                         <input
+                          class="visually-hidden extras__item--checkbox"
                           type="checkbox"
+                          id="sweetener"
                           name="sweetener"
-                          id="sweetener-field"
-                          checked
                         />
-                        <label for="sweetener-field">Сахарозаменитель</label>
-                      </div>
-                      <div class="extras__item-wrapper">
-                        <input type="checkbox" name="water" id="water-field" />
-                        <label for="water-field">Питьевая вода</label>
-                      </div>
-                      <div class="extras__item-wrapper">
-                        <input type="checkbox" name="milk" id="milk-field" />
-                        <label for="milk-field">Молоко</label>
-                      </div>
-                      <div class="extras__item-wrapper">
+                        <span class="extras__item--fake"></span>
+                        <span class="extras__item--text">Сахарозаменитель</span>
+                      </label>
+                    </li>
+                    <li class="extras__item">
+                      <label for="water" class="extras__item--label">
                         <input
+                          class="visually-hidden extras__item--checkbox"
                           type="checkbox"
-                          name="vitamins"
-                          id="vitamins-field"
+                          id="water"
+                          name="water"
                         />
-                        <label for="vitamins-field">Витамины</label>
-                      </div>
-                    </div>
-                  </div>
-                </fieldset>
+                        <span class="extras__item--fake"></span>
+                        <span class="extras__item--text">Питьевая вода</span>
+                      </label>
+                    </li>
+                    <li class="extras__item">
+                      <label for="milk" class="extras__item--label">
+                        <input
+                          class="visually-hidden extras__item--checkbox"
+                          type="checkbox"
+                          id="milk"
+                          name="milk"
+                        />
+                        <span class="extras__item--fake"></span>
+                        <span class="extras__item--text">Молоко</span>
+                      </label>
+                    </li>
+                    <li class="extras__item">
+                      <label for="vitamins" class="extras__item--label">
+                        <input
+                          class="visually-hidden extras__item--checkbox"
+                          type="checkbox"
+                          id="vitamins"
+                          name="vitamins"
+                        />
+                        <span class="extras__item--fake"></span>
+                        <span class="extras__item--text">Витамины</span>
+                      </label>
+                    </li>
+                  </ul>
+                </div>
+              </fieldset>
 
-                <input type="submit" value="Отправить заявку" />
-                <span>*-Обязательные поля</span>
-              </form>
+              <input class="button" type="submit" value="Отправить заявку" />
+              <span class="required-fileds"
+                >&#42; &#8212; Обязательные поля</span
+              >
+            </form>
+          </div>
+        </section>
+
+        <section class="contacts">
+          <div class="container contacts__container">
+            <h2 class="visually-hidden">Контакты</h2>
+            <div class="contacts-details">
+              <p>
+                Приглашаем<br />
+                к сотрудничеству<br />
+                дилеров!
+              </p>
+              <address>
+                ул. Большая<br />
+                Конюшенная, д. 19/8<br />
+                Санкт-Петербург
+              </address>
             </div>
-          </section>
-          <section class="contacts">
-            <div class="container contacts__container">
-              <h2 class="visually-hidden">Контакты</h2>
-              <div class="contacts-details">
-                <p>Приглашаем к сотрудничеству дилеров!</p>
-                <address>
-                  ул. Большая Конюшенная, д. 19/8 Санкт-Петербург
-                </address>
-              </div>
-              <div>
-                <!--здесь будет интерактивная карта-->
-              </div>
-            </div>
-          </section>
-        </div>
+          </div>
+        </section>
+
+        <section class="map">
+          <h2 class="visually-hidden">Как до нас добраться</h2>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3997.2075745066522!2d30.3186700332929
+              6!3d59.93871648187617!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b
+              32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1640901861730!5m2!
+              1sru!2sru"
+            width="600"
+            height="450"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+          >
+          </iframe>
+        </section>
       </main>
 
       <footer class="page-footer">
         <div class="container page-footer__container">
           <div class="page-footer__logo">
-            <p>CAT ENERGY</p>
-            <!--здесь будет SVG иконка-->
+            <img
+              src="./img/footer-logo_cat-energy.svg"
+              width="128"
+              height="24"
+              alt=""
+            />
           </div>
           <div class="page-footer__social social">
             <ul class="social__list">
@@ -236,12 +322,18 @@
                   href="https://vk.com/htmlacademy"
                 >
                   <span class="visually-hidden">Вконтакте</span>
-                  <img
-                    src="./img/icon_vkontakte.svg"
-                    alt="Вконтакте"
-                    width="22"
-                    height="12"
-                  />
+                  <picture>
+                    <source
+                      srcset="img/icon-vkontakte_tablet.svg"
+                      media="(min-width: 768px)"
+                    />
+                    <img
+                      src="img/icon-vkontakte_mobile.svg"
+                      alt="Вконтакте"
+                      width="23"
+                      height="16"
+                    />
+                  </picture>
                 </a>
               </li>
               <li class="social__item">
@@ -250,12 +342,18 @@
                   href="https://www.instagram.com/htmlacademy"
                 >
                   <span class="visually-hidden">Инстаграм</span>
-                  <img
-                    src="./img/icon_instagram.svg"
-                    alt="Инстаграм"
-                    width="16"
-                    height="16"
-                  />
+                  <picture>
+                    <source
+                      srcset="img/icon-instagram_tablet.svg"
+                      media="(min-width: 768px)"
+                    />
+                    <img
+                      src="img/icon-instagram_mobile.svg"
+                      alt="Инстаграм"
+                      width="16"
+                      height="16"
+                    />
+                  </picture>
                 </a>
               </li>
               <li class="social__item">
@@ -264,12 +362,18 @@
                   href="https://www.facebook.com/htmlacademy"
                 >
                   <span class="visually-hidden">Фейсбук</span>
-                  <img
-                    src="./img/icon_facebook.svg"
-                    alt="Фейсбук"
-                    width="10"
-                    height="18"
-                  />
+                  <picture>
+                    <source
+                      srcset="img/icon-facebook_tablet.svg"
+                      media="(min-width: 768px)"
+                    />
+                    <img
+                      src="img/icon-facebook_mobile.svg"
+                      alt="Фейсбук"
+                      width="22"
+                      height="22"
+                    />
+                  </picture>
                 </a>
               </li>
             </ul>
@@ -278,8 +382,9 @@
             <a
               class="copyright__link copyright__link--academy"
               href="https://htmlacademy.ru/intensive/adaptive"
-              >HTML Academy</a
-            >
+              >HTML Academy
+            </a>
+            <img src="./img/logo_html.svg" width="27" height="34" alt="" />
           </div>
         </div>
       </footer>

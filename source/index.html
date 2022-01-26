@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body class="page__body">
-    <div class="main-container">
+    <div class="main-container index-back-picture">
       <header class="page-header">
         <div class="container page-header__container">
           <nav class="main-nav main-nav--closed">
@@ -15,12 +15,12 @@
               <a class="page-header__logo">
                 <picture>
                   <source
-                    srcset="img/logo-cat_tablet.svg"
-                    media="(min-width: 768px)"
-                  />
-                  <source
                     srcset="img/logo-cat_desktop.svg"
                     media="(min-width: 1440px)"
+                  />
+                  <source
+                    srcset="img/logo-cat_tablet.svg"
+                    media="(min-width: 768px)"
                   />
                   <img
                     src="img/logo-cat_mobile.svg"
@@ -75,19 +75,14 @@
           <div class="container promo__can-mobile">
             <picture>
               <source
+                srcset="img/promo-can_desktop.png"
+                media="(min-width: 1200px)"
+              />
+              <source
                 srcset="img/promo-can_tablet.png"
                 media="(min-width: 768px)"
               />
-              <source
-                srcset="img/promo-can_desktop.png"
-                media="(min-width: 1440px)"
-              />
-              <img
-                src="img/promo-can_mobile.png"
-                width="280"
-                height="270"
-                alt="Банка с кормом"
-              />
+              <img src="img/promo-can_mobile.png" alt="Promo can" />
             </picture>
           </div>
           <button class="button">Подобрать программу</button>
@@ -278,6 +273,7 @@
             </div>
           </div>
         </section>
+
         <section class="map">
           <h2 class="visually-hidden">Как до нас добраться</h2>
           <iframe

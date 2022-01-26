@@ -1,12 +1,82 @@
 .special-offer {
-  outline: 2px dotted $blue;
+  min-height: 290px;
 
-  background-color: rgba(104, 183, 56, 0.85);
-}
-
-.special-offer__container {
-  background-image: url("../../img/catalog-special-offer_backpack.png");
+  background-image: url("../../img/catalog-special-offer_backpack__mobile.png");
   background-position: center;
   background-repeat: no-repeat;
   padding: 0;
+
+  @media (min-width: $tablet-width) {
+    background-image: url("../../img/catalog-special-offer_backpack__tablet.png");
+    min-height: 200px;
+  }
+
+  @media (min-width: $desktop-width) {
+    background-image: url("../../img/catalog-special-offer_backpack__desktop.png");
+    min-height: 288px;
+
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    left: 1160px;
+    top: 1590px;
+  }
+}
+
+.special-offer__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: $white;
+  font-family: $second-font;
+  font-size: 16px;
+  line-height: 20px;
+
+  background-image: url("../../img/Rectangle-17__mobile.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 290px;
+  margin-bottom: 35px;
+
+  @media (min-width: $tablet-width) {
+    background-image: url("../../img/Rectangle-17__tablet.png");
+
+    flex-direction: row;
+    justify-content: space-around;
+    min-height: 200px;
+    margin-bottom: 75px;
+  }
+
+  @media (min-width: $desktop-width) {
+    background-image: url("../../img/Rectangle-19.png");
+    flex-direction: column;
+    min-height: 288px;
+    margin: 0;
+  }
+}
+
+.special-offer__container img {
+  margin-bottom: 55px;
+}
+
+.icon-gift {
+  width: 78px;
+  height: 80px;
+  background-image: url("../../img/catalog-special-offer_icon-gift__mobile.svg");
+
+  @media (max-width: $mobile-width-only) {
+    margin: 55px 0 55px 0;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 80px;
+    height: 82.5px;
+    background-image: url("../../img/catalog-special-offer_icon-gift__tablet.svg");
+  }
+}
+
+.special-offer__container p {
+  width: 161px;
+  text-align: center;
+  margin: 0;
 }
