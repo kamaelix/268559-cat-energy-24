@@ -5,6 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>HTML Academy: Кэт энерджи</title>
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" href="favicon.ico" />
+    <link
+      rel="icon"
+      href="img/favicons/favicon-152x152.svg"
+      type="image/svg+xml"
+    />
+    <link rel="apple-touch-icon" href="img/favicons/apple-icon.png" />
+    <link rel="manifest" href="img/favicons/favicon-manifest.webmanifest" />
   </head>
   <body class="page__body">
     <div class="main-container index-back-picture">
@@ -15,12 +23,12 @@
               <a class="page-header__logo">
                 <picture>
                   <source
-                    srcset="img/logo-cat_desktop.svg"
                     media="(min-width: 1440px)"
+                    srcset="img/logo-cat_desktop.svg"
                   />
                   <source
-                    srcset="img/logo-cat_tablet.svg"
                     media="(min-width: 768px)"
+                    srcset="img/logo-cat_tablet.svg"
                   />
                   <img
                     src="img/logo-cat_mobile.svg"
@@ -75,14 +83,24 @@
           <div class="container promo__can-mobile">
             <picture>
               <source
-                srcset="img/promo-can_desktop.png"
                 media="(min-width: 1200px)"
+                srcset="
+                  img/promo-can_desktop.png    1x,
+                  img/promo-can_desktop@2x.png 2x
+                "
               />
               <source
-                srcset="img/promo-can_tablet.png"
                 media="(min-width: 768px)"
+                srcset="
+                  img/promo-can_tablet.png    1x,
+                  img/promo-can_tablet@2x.png 2x
+                "
               />
-              <img src="img/promo-can_mobile.png" alt="Promo can" />
+              <img
+                src="img/promo-can_mobile.png"
+                srcset="img/promo-can_mobile@2x.png 2x"
+                alt="Promo can"
+              />
             </picture>
           </div>
           <button class="button">Подобрать программу</button>
@@ -236,11 +254,15 @@
             <div class="container results__container">
               <picture class="results__container--picture">
                 <source
-                  srcset="img/cat-example_tablet_desktop.png"
+                  srcset="
+                    img/cat-example_tablet.png     1x,
+                    img/cat-example_tabletp@2x.png 2x
+                  "
                   media="(min-width: 768px)"
                 />
                 <img
                   src="img/cat-example-before_mobile.png"
+                  srcset="img/cat-example-before_mobile@2x.png 2x"
                   width="280"
                   height="232"
                   alt="кот Борис до программы питания"

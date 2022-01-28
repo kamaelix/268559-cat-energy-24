@@ -7,6 +7,11 @@
   @media (min-width: $tablet-width) {
     font-size: 20px;
     line-height: 30px;
+    padding: 0 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0;
   }
 }
 
@@ -173,21 +178,84 @@
   position: absolute;
   content: "";
   top: 15px;
-  left: 170px;
-  width: 100%;
   border-bottom: 2px solid $basic-green;
+
+  @media (min-width: $tablet-width) {
+    top: 22px;
+  }
 }
 
 .contacts__title::after {
   left: 220px;
+  width: 60px;
+
+  @media (min-width: 339px) {
+    left: 325px;
+    opacity: 0;
+  }
+
+  @media (min-width: 429px) {
+    left: 370px;
+    opacity: 1;
+    width: 100%;
+  }
+
+  @media (min-width: $tablet-width) {
+    left: 550px;
+    //width: 190px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 670px;
+  }
 }
 
 .comments__title::after {
   left: 150px;
+  // width: 130px;
+  width: 100%;
+
+  @media (min-width: $tablet-width) {
+    left: 230px;
+    // width: 510px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 990px;
+  }
 }
 
 .extras__title::after {
   left: 170px;
+  //width: 110px;
+  width: 100%;
+
+  @media (min-width: $tablet-width) {
+    left: 250px;
+    //width: 490px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 970px;
+  }
+}
+
+.contacts__title::before,
+.comments__title::before,
+.extras__title::before {
+  @media (min-width: $tablet-width) {
+    position: absolute;
+    content: "";
+    top: 22px;
+    left: -80px;
+    width: 50px;
+    border-bottom: 2px solid $basic-green;
+  }
+
+  @media (min-width: $desktop-width) {
+    left: -220px;
+    width: 160px;
+  }
 }
 
 .nutrition-purpose__list {
@@ -298,6 +366,14 @@
 
 .e-mail {
   margin-bottom: 15px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 0;
+  }
 }
 
 .e-mail label,
