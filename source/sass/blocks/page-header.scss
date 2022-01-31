@@ -15,7 +15,7 @@
   min-height: 66px;
 }
 
-.page-header__logo img {
+.page-header__logo svg {
   min-height: 38px;
   margin-top: 10px;
   margin-bottom: auto;
@@ -32,8 +32,17 @@
     width: 202px;
     min-height: 59px;
   }
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 }
 
+.logo-cat_mobile,
 .page-header__logo-2 {
   min-height: 18px;
   margin-top: auto;
@@ -41,6 +50,26 @@
 
   @media (min-width: $tablet-width) {
     display: none;
+  }
+}
+
+.logo-cat_tablet {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: none;
+  }
+}
+
+.logo-cat_desktop {
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    display: block;
   }
 }
 

@@ -92,6 +92,16 @@
   }
 }
 
+.product-details__item svg {
+  width: 60px;
+  height: 60px;
+
+  @media (min-width: $tablet-width) {
+    width: 80px;
+    height: 80px;
+  }
+}
+
 .product-details__item p {
   font-family: $second-font;
   font-size: 14px;

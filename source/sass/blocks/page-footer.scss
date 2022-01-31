@@ -1,8 +1,5 @@
 .page-footer {
   background-color: $basic-grey;
-  max-width: 1440px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .page-footer__container {
@@ -23,6 +20,14 @@
   padding-top: 40px;
   padding-bottom: 30px;
   margin: 0;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 
   @media (max-width: $mobile-width-only) {
     border-bottom: 1px solid $dark-grey;
@@ -55,7 +60,7 @@
   }
 }
 
-.social__link--vkontakte img {
+.vkontakte__icon {
   width: 23px;
   height: 16px;
 
@@ -65,7 +70,7 @@
   }
 }
 
-.social-link--instagram img {
+.instagram__icon {
   width: 16px;
   height: 16px;
 
@@ -85,11 +90,20 @@
   }
 }
 
+.vkontakte__icon,
+.instagram__icon,
+.facebook__icon {
+  &:hover path {
+    fill: $basic-green;
+  }
+
+  &:active path {
+    fill: $basic-green;
+    opacity: 0.3;
+  }
+}
+
 .page-footer__copyright {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
   padding: 22px 0;
   margin: 0;
 
@@ -100,13 +114,34 @@
 }
 
 .page-footer__copyright a {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  width: 100%;
+  align-items: center;
+
   color: $special_dark-grey;
   font-family: $second-font;
   font-size: 16px;
+
+  &:hover {
+    color: $basic-green;
+  }
+
+  &:active {
+    color: $basic-green;
+    opacity: 0.3;
+  }
 }
 
 .page-footer__copyright img {
   @media (min-width: $tablet-width) {
     margin-left: 22px;
+  }
+}
+
+.copyright__link--academy {
+  &:hover {
+    fill: $basic-green;
   }
 }

@@ -293,18 +293,6 @@
   }
 }
 
-//
-// .results__container::after {
-//   content: "";
-// position: absolute;
-//top: 170px;
-//left: 0;
-//width: 100%;
-//height: 462px;
-//background-color: #eaeaea;
-//z-index: -1;
-//}
-
 .results__container--controls {
   display: flex;
   justify-content: space-around;
@@ -335,5 +323,11 @@
   @media (min-width: $tablet-width) {
     margin-left: 23px;
     margin-right: 23px;
+  }
+}
+
+.results__container--controls span {
+  @media (min-width: $tablet-width) {
+    border-bottom: dotted 1px $basic-grey;
   }
 }

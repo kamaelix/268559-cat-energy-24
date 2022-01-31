@@ -12,6 +12,10 @@
   background-color: $basic-grey;
 }
 
+.form .contacts {
+  background-color: $basic-grey;
+}
+
 .contacts__container {
   @media (min-width: $desktop-width) {
     position: absolute;
