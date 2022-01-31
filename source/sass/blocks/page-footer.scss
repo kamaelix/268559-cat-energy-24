@@ -140,6 +140,12 @@
   }
 }
 
+.copyright__link {
+  @media (min-width: $tablet-width) {
+    margin-left: 22px;
+  }
+}
+
 .copyright__link--academy {
   &:hover {
     fill: $basic-green;

@@ -21,20 +21,12 @@
   margin: -1px;
 }
 
-.index-back-picture {
-  @media (min-width: $desktop-width) {
-    background-image: // url("../img/Rectangle-18.png"),
-      url("../img/index-background-desktop-1.png");
-    background-position: 20% 90%;
-    background-repeat: no-repeat;
-  }
-}
-
 .container {
   width: 100%;
+  max-width: 1440px;
   margin: 0 auto;
   padding: 0 20px;
-  max-width: 1440px;
+
   outline: dashed 1px tomato;
 
   @media (min-width: $tablet-width) {
@@ -79,6 +71,13 @@ ol {
   &:active {
     background-color: $basic-green-2;
     color: rgba(255, 255, 255, 0.3);
+  }
+}
+
+.page-main {
+  @media (min-width: $desktop-width) {
+    position: relative;
+    z-index: 2;
   }
 }
 

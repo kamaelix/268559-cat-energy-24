@@ -29,7 +29,7 @@
 
 .promo__container {
   background-image: url("../img/Rectangle-18.png"),
-    url("../img/index-background-desktop-22.png");
+    url("../img/index-background-mobile.png");
   background-position: center, center;
   background-repeat: repeat, no-repeat;
 
@@ -42,12 +42,6 @@
     background-image: none;
   }
 }
-
-// .main-nav__item .main-nav__item--current .promo__container {
-//  @media (min-width: $desktop-width) {
-//    background-image: none;
-//  }
-//}
 
 .promo__intro {
   color: #ffffff;

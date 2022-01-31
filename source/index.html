@@ -15,14 +15,7 @@
     <link rel="manifest" href="img/favicons/favicon-manifest.webmanifest" />
   </head>
   <body class="page__body">
-    <svg style="display: none;">
-      <symbol viewBox="0 0 32 12" id="icon-arrow">
-        <line y1="6" x2="26" y2="6" stroke="black" stroke-width="2"/>
-        <path d="M32 6L25.25 11.1962L25.25 0.803848L32 6Z" fill="black"/>
-      </symbol>
-    </svg>
-
-      <header class="page-header">
+      <header class="page-header index-background">
         <div class="container page-header__container">
           <nav class="main-nav main-nav--closed">
             <div class="page-header__logo--wrapper">
@@ -40,24 +33,6 @@
                     <use href="img/sprite.svg#logo-cat_mobile__icon"></use>
                   </svg>
                 </picture>
-                <!--
-                <picture>
-                  <source
-                    media="(min-width: 1440px)"
-                    srcset="img/logo-cat_desktop.svg"
-                  />
-                  <source
-                    media="(min-width: 768px)"
-                    srcset="img/logo-cat_tablet.svg"
-                  />
-                  <img
-                    src="img/logo-cat_mobile.svg"
-                    width="33"
-                    height="38"
-                    alt="Интернет-магазин Кэт энерджи"
-                  />
-                </picture>
-                -->
               </a>
               <a class="page-header__logo-2" href="index.html">
                 <picture>
@@ -66,15 +41,6 @@
                   </svg>
                 </picture>
               </a>
-                <!--
-                <img
-                  src="img/logo-cat-energy_mobile.svg"
-                  width="101"
-                  height="18"
-                  alt="Логотип"
-                />
-                -->
-
               <button class="main-nav__toggler toggler" type="button">
                 <span class="visually-hidden">Открыть меню</span>
               </button>
@@ -291,8 +257,11 @@
 
               <div class="results__container--controls">
                 <span>Было</span>
-                    <input type="range" min="0" max="100" step="1" value="50" />
-                <span>Стало</span>
+                    <input class="visually-hidden" type="range" min="0" max="100" step="1" value="50" />
+                    <div class="results__range">
+
+                    </div>
+                    <span>Стало</span>
               </div>
             </div>
           </div>
@@ -338,13 +307,22 @@
           <div class="page-footer__logo">
             <a class="footer-logo_cat-energy" href="index.html">
               <svg class="footer-logo_cat-energy--icon" width="128" height="24">
-                <rect width="128" height="24" fill="url(#pattern0)"/>
-                <defs>
-                <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
-                <use xlink:href="#image0_2403_2143" transform="scale(0.0078125 0.0416667)"/>
-                </pattern>
-                <image id="image0_2403_2143" width="128" height="24" xlink:href="data:image/png;base64,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"/>
-                </defs>
+                  <g clip-path="url(#clip0_135_3260)">
+                  <path d="M1.60253 22.0513C0.468358 20.3682 -0.0946573 18.3503 3.01601e-05 16.3077V7.79487C-0.137317 5.73031 0.390444 3.67661 1.50238 1.94872C2.6041 0.615385 4.30676 0 6.81067 0C9.31458 0 10.9171 0.615385 11.9187 1.74359C13.006 3.17255 13.5409 4.96181 13.421 6.76923V8.82051H8.51333V6.46154C8.55297 5.76385 8.45065 5.06533 8.21286 4.41026C8.08576 4.14583 7.88431 3.9264 7.63443 3.78018C7.38455 3.63395 7.09766 3.56763 6.81067 3.58974C6.10958 3.58974 5.60879 3.79487 5.40848 4.30769C5.18191 5.03643 5.08025 5.79984 5.10801 6.5641V17.5385C5.05512 18.2799 5.19327 19.0227 5.50864 19.6923C5.70895 20.2051 6.20973 20.4103 6.91083 20.4103C7.61192 20.4103 8.01255 20.2051 8.21286 19.6923C8.44058 18.9992 8.54242 18.2692 8.51333 17.5385V15.0769H13.421V17.1282C13.5229 18.9651 12.9911 20.7803 11.9187 22.2564C10.9171 23.4872 9.21443 24.1026 6.81067 24.1026C4.40692 24 2.6041 23.3846 1.60253 22.0513Z" fill="#111111"/>
+                  <path d="M19.3302 0.307617H25.0391L29.2457 23.6922H24.6385L23.8372 18.7692H20.5321L19.7308 23.6922H15.0235L19.3302 0.307617ZM23.4366 15.6922L22.2347 6.56403L21.0329 15.6922H23.4366Z" fill="#111111"/>
+                  <path d="M32.7512 4.20505H29.3459V0.307617H41.2645V4.10249H37.8592V23.6922H32.7512V4.20505Z" fill="#111111"/>
+                  <path d="M50.3787 0.307617H59.1925V2.76916H53.4836V10.4615H58.0908V12.8204H53.4836V21.4358H59.1925V23.7948H50.2786V0.307617H50.3787Z" fill="#111111"/>
+                  <path d="M61.7966 0.307617H64L70.5102 15.7948V0.307617H73.1142V23.6922H71.1111L64.5008 7.69223V23.6922H61.7966V0.307617Z" fill="#111111"/>
+                  <path d="M76.1189 0.307617H84.9327V2.76916H79.2238V10.4615H83.831V12.8204H79.2238V21.4358H84.9327V23.7948H76.1189V0.307617Z" fill="#111111"/>
+                  <path d="M87.5368 0.3076H92.144C93.9564 0.179397 95.7575 0.685711 97.2519 1.7435C98.3537 2.66657 98.8544 4.3076 98.8544 6.46145C98.8544 9.4358 97.953 11.282 96.0501 11.8973L99.2551 23.5897H96.1502L93.1455 12.6153H90.6416V23.5897H87.4366V0.3076H87.5368ZM91.9437 10.3589C92.9762 10.446 94.0053 10.1553 94.8482 9.53837C95.4491 9.02555 95.7496 7.99991 95.7496 6.46145C95.7774 5.69719 95.6757 4.93378 95.4491 4.20504C95.2237 3.68211 94.8366 3.24964 94.3474 2.97427C93.6576 2.65236 92.9003 2.51137 92.144 2.56401H90.7418V10.2563H91.9437V10.3589Z" fill="#111111"/>
+                  <path d="M102.861 21.9487C101.82 20.1554 101.331 18.0821 101.459 15.9999V8.20507C101.434 6.71875 101.602 5.23567 101.959 3.79481C102.294 2.71811 102.962 1.78218 103.862 1.12815C104.981 0.450275 106.271 0.128917 107.568 0.20507C109.671 0.20507 111.174 0.71789 112.075 1.8461C113.112 3.33582 113.608 5.14977 113.477 6.9743V7.79481H110.473V7.07687C110.477 6.21789 110.41 5.36008 110.272 4.51276C110.188 3.97732 109.9 3.49792 109.471 3.17943C108.908 2.80104 108.24 2.62099 107.568 2.66661C106.85 2.61949 106.139 2.83785 105.565 3.28199C105.329 3.48529 105.137 3.73569 104.999 4.01787C104.861 4.30004 104.781 4.60805 104.764 4.92302C104.632 5.83993 104.565 6.76543 104.563 7.69225V16.4102C104.49 17.7384 104.694 19.0674 105.164 20.3076C105.565 21.1281 106.366 21.4358 107.568 21.4358C108.043 21.4964 108.524 21.4119 108.952 21.1929C109.38 20.9739 109.734 20.6302 109.972 20.2051C110.501 18.9081 110.741 17.5064 110.673 16.1025V14.4615H107.768V12.1025H113.577V23.6923H111.574L111.274 21.0256C111.011 21.9193 110.465 22.6975 109.72 23.2364C108.976 23.7753 108.078 24.0441 107.167 23.9999C106.34 24.0498 105.513 23.8885 104.761 23.5304C104.01 23.1724 103.357 22.6289 102.861 21.9487V21.9487Z" fill="#111111"/>
+                  <path d="M119.987 15.4871L115.08 0.410156H118.084L121.59 11.6922L124.995 0.410156H128L123.092 15.4871V23.6922H120.088V15.4871H119.987Z" fill="#111111"/>
+                  </g>
+                  <defs>
+                  <clipPath id="clip0_135_3260">
+                  <rect width="128" height="24" fill="white"/>
+                  </clipPath>
+                  </defs>
               </svg>
             </a>
           </div>
