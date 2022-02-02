@@ -21,25 +21,9 @@
   margin: -1px;
 }
 
-.main-container {
-  max-width: 1440px;
-  min-width: 320px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.index-back-picture {
-  @media (min-width: $desktop-width) {
-    background-image: url("../img/Rectangle-18.png"),
-      url("../img/index-background-desktop-1.png");
-    background-position: 720px 0, 720px 0;
-    background-size: 720px 694px, 720px 694px;
-    background-repeat: no-repeat, no-repeat;
-  }
-}
-
 .container {
   width: 100%;
+  max-width: 1440px;
   margin: 0 auto;
   padding: 0 20px;
 
@@ -76,6 +60,22 @@ ol {
 
   @media (max-width: $mobile-width-only) {
     width: 100%;
+  }
+
+  &:hover {
+    background-color: $basic-green-2;
+  }
+
+  &:active {
+    background-color: $basic-green-2;
+    color: rgba(255, 255, 255, 0.3);
+  }
+}
+
+.page-main {
+  @media (min-width: $desktop-width) {
+    position: relative;
+    z-index: 2;
   }
 }
 

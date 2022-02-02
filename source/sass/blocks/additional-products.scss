@@ -1,10 +1,22 @@
+.additional-products {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: $desktop-width) {
+    flex-direction: row;
+  }
+}
+
+.additional-products__wrapper {
+  @media (min-width: $desktop-width) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
 .additional-products__container {
   @media (max-width: $mobile-width-only) {
     border-top: 1px solid #cdcdcd;
-  }
-
-  @media (min-width: $desktop-width) {
-    margin-left: 0;
   }
 }
 
@@ -22,6 +34,7 @@
 
   @media (min-width: $desktop-width) {
     padding-left: 0;
+    width: fit-content;
   }
 }
 
