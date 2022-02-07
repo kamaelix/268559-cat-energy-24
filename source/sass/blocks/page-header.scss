@@ -1,7 +1,7 @@
 .index-background {
   @media (min-width: $desktop-width) {
     position: relative;
-    z-index: 2;
+    z-index: 3;
 
     &::after {
       content: "";
@@ -10,7 +10,7 @@
       right: 0;
       width: 50%;
       min-height: 694px;
-      background-image: url("../../img/index-background-desktop.png");
+      background-image: url("../img/index-background-desktop.png");
       background-repeat: no-repeat;
       z-index: -1;
     }
