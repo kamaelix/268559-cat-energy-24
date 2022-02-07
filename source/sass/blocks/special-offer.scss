@@ -1,9 +1,8 @@
 .special-offer {
   min-height: 290px;
-  // background-color: rgba(104, 183, 56, 0.85);
 }
 
-.special-offer__container {
+.special-offer-container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -13,16 +12,28 @@
   line-height: 20px;
   min-height: 290px;
 
-  background-image: url("../img/Rectangle-18.png"),
-    url("../img/catalog-special-offer_backpack__mobile.png");
+  background-image: url("../img/catalog-special-offer_Rectangle-17_catalog_mobile.png"),
+    url("../img/catalog-special-offer_backpack_mobile.png");
   background-position: center, center;
   background-repeat: repeat, no-repeat;
 
+  @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    background-image: url("../img/catalog-special-offer_Rectangle-17_catalog_mobile@2x.png"),
+      url("../img/catalog-special-offer_backpack_mobile@2x.png");
+    background-size: 280px auto;
+  }
+
   @media (min-width: $tablet-width) {
-    background-image: url("../img/Rectangle-17__tablet.png"),
-      url("../../img/catalog-special-offer_backpack__tablet.png");
+    background-image: url("../img/catalog-special-offer_Rectangle-18_catalog_tablet.png"),
+      url("../../img/catalog-special-offer_backpack_tablet.png");
     background-position: center, center;
     background-repeat: repeat, no-repeat;
+
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      background-image: url("../img/catalog-special-offer_Rectangle-18_catalog_tablet@2x.png"),
+        url("../img/catalog-special-offer_backpack_tablet@2x.png");
+      background-size: 707px auto;
+    }
 
     flex-direction: row;
     justify-content: space-around;
@@ -31,19 +42,25 @@
   }
 
   @media (min-width: $desktop-width) {
-    background-image: url("../img/Rectangle-19.png"),
-      url("../img/catalog-special-offer_backpack__desktop.png");
+    background-image: url("../img/catalog-special-offer_Rectangle-19_catalog_desktop.png"),
+      url("../img/catalog-special-offer_backpack_desktop.png");
     background-position: center, center;
     background-repeat: no-repeat, no-repeat;
+
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      background-image: url("../img/catalog-special-offer_Rectangle-19_catalog_desktop@2x.png"),
+        url("../img/catalog-special-offer_backpack_desktop@2x.png");
+      background-size: 245px auto;
+    }
 
     flex-direction: column;
     justify-content: center;
     min-height: 288px;
-    margin: 50px 0 0 0;
+    margin: 105px 0 0 0;
   }
 }
 
-.special-offer__container img {
+.special-offer-container img {
   margin-bottom: 55px;
 }
 
@@ -67,7 +84,7 @@
   }
 }
 
-.special-offer__container p {
+.special-offer-container p {
   width: 161px;
   text-align: center;
   margin: 0;

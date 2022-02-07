@@ -3,6 +3,7 @@
 }
 
 .page__body {
+  position: relative;
   padding: 0;
   margin: 0;
   font-family: "Oswald", "Arial", sans-serif;
@@ -40,23 +41,18 @@ a {
   text-decoration: none;
 }
 
-ul,
-ol {
-  list-style: none;
-}
-
 .button {
   display: block;
   color: $white;
   text-transform: uppercase;
   background-color: $basic-green;
   border: none;
-  font-family: "Oswald", sans-serif;
+  font-family: $main-font;
   font-size: 14px;
   line-height: 18px;
   font-weight: 400;
   text-align: center;
-  padding: 10px 0;
+  padding: 11px 0;
 
   @media (max-width: $mobile-width-only) {
     width: 100%;
@@ -75,7 +71,7 @@ ol {
 .page-main {
   @media (min-width: $desktop-width) {
     position: relative;
-    z-index: 2;
+    z-index: 5;
   }
 }
 
