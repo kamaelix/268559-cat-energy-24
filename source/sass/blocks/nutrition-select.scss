@@ -504,6 +504,10 @@
   @media (min-width: $tablet-width) {
     padding-left: 30px;
   }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 0;
+  }
 }
 
 .extras__item-fake {
@@ -566,7 +570,8 @@
 
   @media (min-width: $desktop-width) {
     width: 568px;
-    margin-bottom: 82px;
+    margin-top: 12px;
+    margin-bottom: 70px;
   }
 }
 
@@ -583,14 +588,16 @@
     font-size: 16px;
     line-height: 16px;
     position: relative;
+    width: 250px;
     top: -60px;
-    left: 120px;
+    left: 309px;
   }
 
   @media (min-width: $desktop-width) {
     position: relative;
     bottom: 12px;
-    left: 650px;
+    top: -101px;
+    left: 615px;
     margin-bottom: 0;
   }
 }
