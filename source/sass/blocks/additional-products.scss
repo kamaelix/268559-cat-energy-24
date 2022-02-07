@@ -39,6 +39,7 @@
   @media (min-width: $desktop-width) {
     padding-left: 0;
     width: fit-content;
+    margin: 0 0 80px;
   }
 }
 
@@ -72,7 +73,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding-bottom: 15px;
+    padding-bottom: 50px;
   }
 }
 
@@ -85,7 +86,8 @@
 
   @media (min-width: $desktop-width) {
     align-self: center;
-
+    font-size: 20px;
+    line-height: 20px;
     margin: 0;
   }
 }

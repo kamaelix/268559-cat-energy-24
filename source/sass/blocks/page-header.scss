@@ -1,6 +1,5 @@
 .index-background {
   @media (min-width: $desktop-width) {
-    position: relative;
     z-index: 3;
 
     &::after {
@@ -11,12 +10,15 @@
       width: 50%;
       min-height: 694px;
       background-image: url("../img/index-background-desktop.png");
+      background-color: #63a63b;
       background-repeat: no-repeat;
       z-index: -1;
 
       @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
         background-image: url("../img/index-background-desktop@2x.png");
-        background-size: 720px auto;
+        background-color: #63a63b;
+        background-size: 720px;
+        background-position: top right;
       }
     }
   }
@@ -246,15 +248,28 @@
   }
 }
 
-.main-nav--nojs .main-nav__toggler {
-  display: none;
-}
-
-.main-nav--nojs .main-nav__container {
-  position: static;
-  min-height: 0;
-}
-
-.main-nav--nojs .main-nav__item {
+.main-nav--nojs .main-nav__list {
   display: block;
 }
+
+@media (min-width: $desktop-width) {
+  .index-background::after {
+    background-image: url("../img/index-background-desktop@2x.png");
+    background-color: #63a63b;
+    background-size: 720px;
+    background-position: top right;
+  }
+}
+
+// .main-nav--nojs .main-nav__toggler {
+//   display: none;
+// }
+
+// .main-nav--nojs.main-nav__container {
+//   position: static;
+//   min-height: 0;
+// }
+
+// .main-nav--nojs .main-nav__item {
+//   display: block;
+// }
