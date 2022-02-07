@@ -197,7 +197,7 @@
   flex-direction: column;
   align-items: center;
   flex-wrap: nowrap;
-  justify-content: end;
+  justify-content: flex-end;
 
   @media (min-width: $tablet-width) {
     justify-content: space-between;
