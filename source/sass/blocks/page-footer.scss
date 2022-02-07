@@ -18,7 +18,7 @@
   display: flex;
   justify-content: center;
   padding-top: 40px;
-  padding-bottom: 30px;
+  padding-bottom: 27px;
   margin: 0;
 
   &:hover {
@@ -46,12 +46,13 @@
 }
 
 .social__list {
+  list-style: none;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   width: 130px;
-  padding: 20px 0;
+  padding: 18px 0;
   margin: 0 auto;
 
   @media (min-width: $tablet-width) {
@@ -59,8 +60,12 @@
     padding-bottom: 58px;
   }
 }
+.social__item {
+  width: 23px;
+  height: 24px;
+}
 
-.vkontakte__icon {
+.vkontakte-icon {
   width: 23px;
   height: 16px;
 
@@ -70,7 +75,7 @@
   }
 }
 
-.instagram__icon {
+.instagram-icon {
   width: 16px;
   height: 16px;
 
@@ -90,9 +95,10 @@
   }
 }
 
-.vkontakte__icon,
-.instagram__icon,
-.facebook__icon {
+.vkontakte-icon,
+.instagram-icon,
+.facebook-icon {
+  vertical-align: middle;
   &:hover path {
     fill: $basic-green;
   }
@@ -124,6 +130,12 @@
   font-family: $second-font;
   font-size: 16px;
 
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.page-footer__copyright picture {
   &:hover {
     color: $basic-green;
   }
@@ -146,8 +158,8 @@
   }
 }
 
-.copyright__link--academy {
-  &:hover {
-    fill: $basic-green;
-  }
-}
+// .copyright__link--academy {
+//   &:hover {
+//     fill: $basic-green;
+//   }
+// }
