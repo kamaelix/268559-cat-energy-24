@@ -60,6 +60,7 @@
     padding-bottom: 58px;
   }
 }
+
 .social__item {
   width: 23px;
   height: 24px;
@@ -99,6 +100,7 @@
 .instagram-icon,
 .facebook-icon {
   vertical-align: middle;
+
   &:hover path {
     fill: $basic-green;
   }
@@ -157,9 +159,3 @@
     margin-left: 22px;
   }
 }
-
-// .copyright__link--academy {
-//   &:hover {
-//     fill: $basic-green;
-//   }
-// }
