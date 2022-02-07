@@ -55,16 +55,24 @@
   }
 }
 
-.map-contacts-details address {
+.contacts-details__address {
   font-family: $second-font;
   color: #444444;
   font-size: 14px;
   line-height: 20px;
   font-weight: normal;
+  font-style: normal;
 
   @media (min-width: $tablet-width) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
     font-size: 16px;
     line-height: 20px;
     text-align: end;
+  }
+  @media (min-width: $desktop-width) {
+    text-align: start;
   }
 }
