@@ -13,6 +13,7 @@
       background-image: url("../img/index-background-desktop.png");
       background-repeat: no-repeat;
       z-index: -1;
+
       @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
         background-image: url("../img/index-background-desktop@2x.png");
         background-size: 720px auto;
@@ -44,14 +45,12 @@
 }
 
 .page-header__logo {
-  // padding-top: 12px;
   margin-right: 9px;
 
   @media (min-width: $tablet-width) {
     width: 174px;
     min-height: 52px;
     margin-left: 0;
-    // margin-top: 25px;
   }
 
   @media (min-width: $desktop-width) {
@@ -71,16 +70,12 @@
 .logo-cat,
 .page-header__logo-2 {
   min-height: 18px;
-  // margin-top: auto;
-  // margin-bottom: auto;
 }
 
 .page-header__logo-2 {
   margin-top: 12px;
   margin-left: 10px;
-}
 
-.page-header__logo-2 {
   @media (min-width: $tablet-width) {
     display: none;
   }

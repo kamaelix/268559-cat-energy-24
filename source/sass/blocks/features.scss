@@ -3,6 +3,7 @@
     margin-top: -52px;
     margin-bottom: 15px;
   }
+
   @media (min-width: $desktop-width) {
     margin-top: 15px;
     margin-bottom: 74px;
@@ -173,6 +174,7 @@
     line-height: 30px;
     font-weight: 400;
   }
+
   @media (min-width: $desktop-width) {
     padding-top: 0;
   }
@@ -234,12 +236,9 @@
   }
 }
 
-// .features__link img {
-//   display: inline-block;
-//   margin-left: 15px;
-// }
 .features__link-icon {
   margin-left: 10px;
+
   @media (min-width: $tablet-width) {
     margin-left: 20px;
   }

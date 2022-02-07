@@ -20,6 +20,7 @@
   line-height: 36px;
   font-weight: 400;
   text-transform: none;
+  margin-top: 27px;
 
   @media (min-width: $desktop-width) {
     font-size: 60px;
@@ -74,7 +75,7 @@
   display: flex;
   flex-wrap: nowrap;
   align-items: center;
-  margin-bottom: 15px;
+  margin-bottom: 13px;
 
   @media (min-width: $desktop-width) {
     margin-bottom: 20px;
@@ -85,7 +86,7 @@
 .cat-weight label,
 .cat-age label {
   white-space: nowrap;
-  margin-right: 15px;
+  margin-right: 12px;
 }
 
 .cat-data__basic input {
@@ -141,6 +142,8 @@
 
 .nutrition-purpose {
   color: #222222;
+  padding-top: 15px;
+  margin-bottom: 25px;
 
   @media (min-width: $tablet-width) {
     margin-bottom: 75px;
@@ -150,6 +153,7 @@
 .cat-data fieldset {
   border: none;
   padding: 0;
+  margin: 0;
 }
 
 .contacts-title,
@@ -161,6 +165,7 @@
   font-size: 24px;
   line-height: 26px;
   text-transform: none;
+  padding-left: 0;
   margin-bottom: 35px;
 
   @media (min-width: $tablet-width) {
@@ -187,7 +192,6 @@
   display: flex;
   flex-direction: column;
 
-  list-style: none;
   margin: 0;
   padding: 0;
 
@@ -198,7 +202,7 @@
 }
 
 .nutrition-purpose__item {
-  padding-bottom: 8px;
+  padding-bottom: 10px;
 
   &:last-child {
     @media (max-width: $mobile-width-only) {
@@ -258,7 +262,7 @@
 .extras__item-text {
   font-size: 16px;
   line-height: 18px;
-  padding-left: 15px;
+  padding-left: 10px;
 
   @media (min-width: $tablet-width) {
     font-size: 20px;
@@ -269,7 +273,7 @@
 
 .contact-me {
   color: #444444;
-  margin-bottom: 15px;
+  margin-bottom: 25px;
 
   @media (min-width: $tablet-width) {
     margin-bottom: 65px;
@@ -310,7 +314,7 @@
 .e-mail label,
 .phone label {
   white-space: nowrap;
-  margin-right: 15px;
+  margin-right: 8px;
 }
 
 .contact-me input {
@@ -377,7 +381,7 @@
 }
 
 .comments {
-  margin-bottom: 25px;
+  margin-bottom: 22px;
 
   @media (min-width: $tablet-width) {
     margin-bottom: 65px;
@@ -539,4 +543,12 @@
     left: 650px;
     margin-bottom: 0;
   }
+}
+
+.cat-data__fieldset {
+  border-bottom: 1px solid #cdcdcd;
+
+  // @media (min-width: $tablet-width) {
+  //   border-bottom: none;
+  // }
 }
